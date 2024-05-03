@@ -1,0 +1,101 @@
+.btn{
+    border: none;
+    outline: none;
+    background-color: var(--primary-color);
+    color: white;
+    padding: .75em 1em;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    box-shadow: 0 3px 6px var(--shadow-color);
+    &:hover{
+        box-shadow: 0 1px 3px var(--shadow-color);
+    }
+}
+
+.section{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    .col{
+        width:50%;
+    }
+
+    .naslov{
+        color: var(--text-color);
+        font-size:  2em;
+        margin-bottom: .25em;
+    }
+
+    .info{
+        color: var(--text-light);
+        font-size: 1em;
+        letter-spacing: 1px;
+        line-height: 1.3;
+        margin-bottom: 1.25em;
+    }
+}
+
+.section.uvod{
+    .tekst{
+        padding-right: 1em;
+    }
+    .slike{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.75vw;
+        .uvod-slike{
+            transform: scale(0);
+            opacity: 0;
+            animation: .5s popOut forwards;
+            border-radius: 3px;
+            overflow: hidden;
+
+            &:nth-child(2){
+                animation-delay: .1s;
+            }
+            &:nth-child(3){
+                animation-delay: .2s;
+            }
+            &:nth-child(6){
+                animation-delay: .3s;
+            }
+            &:nth-child(9){
+                animation-delay: .4s;
+            }
+            &:nth-child(8){
+                animation-delay: .5s;
+            }
+            &:nth-child(7){
+                animation-delay: .6s;
+            }
+            &:nth-child(4){
+                animation-delay: .7s;
+            }
+            &:nth-child(5){
+                animation-delay: .8s;
+            }
+        }
+    }
+}
+
+img{
+    object-fit:cover;
+}
+
+.uvod-slike{
+    background-color: red;
+    height: 0;
+    width:100%;
+    position: relative;
+    img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width:100%;
+        height: 100%;
+    }
+}
+
+
