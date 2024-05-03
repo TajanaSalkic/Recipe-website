@@ -18,7 +18,6 @@ function App() {
           <Route path="/" element={<Pocetna />}/>
           <Route path="/recepti" element={<Recepti />}/>
           <Route path="/about" element={<Onama />}/>
-          
         </Routes>
       </div>
       {/*<Footer/> */}

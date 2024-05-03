@@ -43,7 +43,7 @@ export default function Navbar(){
             <a href="#!" className="logo">IME</a>
             <div className="nav-links">
                 {links.map(link => (
-                    <Link to={link.path} className={ location.pathname == link.path ? "active" : ""} key={link.name}>{link.name}</Link>
+                    <Link to={link.path} className={ location.pathname === link.path ? "active" : ""} key={link.name}>{link.name}</Link>
                 ))}
                { /*<a href="#!">Home</a>
                 <a href="#!">Recipes</a>

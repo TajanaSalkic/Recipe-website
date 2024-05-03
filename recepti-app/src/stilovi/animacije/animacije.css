@@ -7,6 +7,16 @@
     }
 }
 
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+
 @keyframes popOut{
     from{
         transform:scale(0);
