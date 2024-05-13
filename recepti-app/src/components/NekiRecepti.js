@@ -4,17 +4,17 @@ import Tabela from "./Tabela"
 import {faContactBook, faHome, faInfoCircle, faList, faSignIn} from "@fortawesome/free-solid-svg-icons"
 
 import { Link } from "react-router-dom"
-export default function ReceptiNeki(){
+export default function NekiRecepti(){
     
     const images = [
         { src: "/img/Burger.jpg", category: "FastFood", path:"/burger" },
         { src: "/img/lunch.jpg", category: "Lunch", path:"/lunch" },
         { src: "/img/salad.jpg", category: "Salad", path:"/salad" },
-        { src: "/img/sandwich.jpg", category: "Sandwich", path:"/sandwiches" },
-        { src: "/img/macarons.jpeg", category: "Sweets", path:"/sweets" },
         { src: "/img/pancakes.webp", category: "Sweets", path:"/sweets" },
     ]  
 
+    {/*{ src: "/img/sandwich.jpg", category: "Sandwich", path:"/sandwiches" },
+        { src: "/img/macarons.jpeg", category: "Sweets", path:"/sweets" },*/}
    
 
     const links=[{

@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar"
 import Pocetna from './stranice/Pocetna';
 import Onama from './stranice/Onama';
 import Recepti from './stranice/Recepti';
+import Recept from './stranice/Recept';
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
           <Route path="/" element={<Pocetna />}/>
           <Route path="/recepti" element={<Recepti />}/>
           <Route path="/about" element={<Onama />}/>
+          <Route exact path="/recipe/:id" element={<Recept/>}/>
+
         </Routes>
       </div>
       {/*<Footer/> */}
@@ -26,3 +29,4 @@ function App() {
 }
 
 export default App;
+

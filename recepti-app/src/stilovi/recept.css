@@ -1,0 +1,112 @@
+.recipe-page {
+    display: flex;
+   flex-direction: column;
+    align-items: center;
+
+    .col2{
+        width: 50%;
+        box-sizing: border-box;
+        padding: 30px;
+
+    }
+
+    .col2.sastojci{
+        display: flex;
+    flex-wrap: wrap;
+    }
+
+    .col3.sastojci{
+        display: flex;
+        flex-wrap: wrap;
+        width: 50%;
+        margin-top: 20px;
+    }
+
+    .column1{
+        flex: 1; 
+        width: 50%; 
+        box-sizing: border-box;
+        padding: 10px;
+    }
+
+    .column2{
+        flex: 1;
+    width: 50%; 
+    box-sizing: border-box;
+    padding: 10px;
+    }
+
+    .column3{
+        flex: 1; 
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px;
+    }
+
+    
+    .columns {
+        display: flex;
+        flex-wrap: wrap; 
+    }
+    
+
+    
+    .naziv-recepta{
+        width:100%;
+        text-align: center;
+        padding-top: 15px;
+        .porijeklo{
+            padding-top: 20px;
+        }
+    }
+
+    .citat{
+        width:100%;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+.col2.slika img {
+    max-width: 100%; /* Postavlja najvecu sirinu na 100% njenog kontejnera */
+    height: auto; 
+}
+
+.crossed{
+    text-decoration: line-through;
+}
+
+.check {
+    margin-right: 10px; 
+    transform: scale(1.2); 
+    margin-bottom: 10px;
+    margin-top: 12px;
+}
+
+.check1 {
+    margin-right: 10px; 
+    transform: scale(1.2); 
+    margin-bottom: 10px;
+    margin-top: 12px;
+}
+
+label {
+    font-size: 1.1em; 
+    margin-left: 5px; 
+}
+
+.col2.sastojci h2{
+    margin-bottom: 10px !important;
+    width: 25% !important;
+}
+
+.video iframe {
+    border-radius: 10px;
+    width: 560px;
+    height: 315px;
+}
+
+.video{
+    padding-top: 40px;
+}

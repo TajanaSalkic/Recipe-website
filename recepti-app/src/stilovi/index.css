@@ -66,7 +66,7 @@ a{
         .tekst{
             width: 100%;
         }
-        .col.slike{
+        .col1.slike{
             padding:30px
         }
         .slike{
@@ -108,12 +108,15 @@ a{
 
     .section.nrecepti{
         
-        .col.slike{
+        .col1.slike{
+            width:100%; 
             padding-top: 35px !important;
-            width:100%;
+            padding-bottom: 35px !important;
+            padding-right: 0 !important;
+            padding-left: 0 !important;
         }
 
-        .col.tabela{
+        .col1.tabela{
             width:100%;
         }
     }

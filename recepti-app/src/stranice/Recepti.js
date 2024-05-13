@@ -1,5 +1,9 @@
+import Jelo from "../components/Jelo"
+
 export default function Recepti(){
     return(
-        <div>Recepti</div>
+        <div>
+            <Jelo/>
+        </div>
     )
 }

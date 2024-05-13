@@ -1,11 +1,11 @@
 import Uvod from "../components/Uvod.js"
-import ReceptiNeki from '../components/ReceptiNeki.js';
+import NekiRecepti from '../components/NekiRecepti.js';
 
 export default function Pocetna(){
     return(
         <div>
              <Uvod/>
-        <ReceptiNeki/>
+        <NekiRecepti/>
         </div>
     )
 }
