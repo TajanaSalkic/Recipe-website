@@ -1,0 +1,90 @@
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@font-face {
+    font-family: 'PisanaSlova';
+    src: url('/public/fonts/Simple-Farmhouse.ttf') format('truetype');
+    /* Dodatne opcije fonta (npr. font-weight, font-style) mogu se specificirati ovdje */
+}
+
+.navbar-donji {
+    background-color: rgb(255,0,86);
+    overflow: hidden;
+    padding: 10px 20px;
+    width: 100%;
+    margin-top: 50px;
+    bottom: 0;
+    animation: slideIn .9s forwards;
+}
+
+.navbar-donji-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-donji-logo h1 {
+    color: white;
+    font-size: 50px;
+    margin-left: 20px;
+    font-family: 'PisanaSlova', 'PisanaSlova', Times, serif, 'PisanaSlova';
+}
+
+.navbar-donji-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-left: 875px;
+}
+
+.navbar-donji-item {
+    margin: 0 10px;
+}
+
+.navbar-donji-link {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.navbar-donji-followus {
+    color: white;
+}
+
+/* Media query za mobilne uređaje */
+@media only screen and (max-width: 768px) {
+    .navbar-donji {
+        padding: 10px; /* Smanjujemo padding */
+    }
+
+    .navbar-donji-logo h1 {
+        font-size: 24px; /* Smanjujemo veličinu fonta */
+        margin-left: 10px; /* Smanjujemo margin za bolji raspored */
+    }
+
+    .navbar-donji-menu {
+        margin-left: 0; /* Poništavamo margin kako bi se stavke menua bolje rasporedile */
+        display: flex; /* Prikazujemo stavke u flex kontejneru */
+        flex-direction: row; /* Postavljamo horizontalni raspored stavki */
+    }
+
+    .navbar-donji-item {
+        margin: 0 5px; /* Smanjujemo margin između stavki */
+    }
+
+    .navbar-donji-link {
+        font-size: 16px; /* Smanjujemo veličinu fonta stavki */
+    }
+
+    .navbar-donji-followus {
+        display: none; /* Sakrivamo tekst "Follow Us" na malim ekranima */
+    }
+}
+                

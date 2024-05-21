@@ -1,0 +1,188 @@
+.about-us-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f0f0f0;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.text-container {
+    flex: 2;
+    color: black;
+}
+
+.image-container {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.image-container img {
+    max-width: 100%;
+    border-radius: 5px;
+    animation: .4s popOut forwards;
+}
+
+@font-face {
+    font-family: 'PisanaSlova';
+    src: url('/public/fonts/Simple-Farmhouse.ttf') format('truetype');
+}
+
+.text-container h1 {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 4%;
+    margin-top: 0;
+    color: rgb(255,0,86);
+}
+
+.text-container p {
+    margin-bottom: 22px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: justify;
+    animation: .9s popOut forwards;
+}
+
+.images-with-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    border: 2px solid rgb(255, 0, 86); /* Dodajemo okvir */
+    border-radius: 10px; /* Dodajemo zaobljenost ivica */
+}
+
+.image-text-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+.naslov-kosmomi {
+    color: rgb(255,0,86);
+    font-size: 50px;
+    margin-left: 340px;
+    font-family: 'PisanaSlova', 'PisanaSlova', Times, serif, 'PisanaSlova';
+    animation: .9s popOut forwards;
+}
+
+.naslov-kakodonas{
+    color: rgb(255,0,86);
+    font-size: 50px;
+    margin-left: 120px;
+    margin-right: 150px;
+    font-family: 'PisanaSlova', 'PisanaSlova', Times, serif, 'PisanaSlova';
+    animation: .9s popOut forwards;
+
+}
+
+
+
+.image-text-item img {
+    max-width: 150px;
+    margin-right: 20px;
+    border-radius: 150px;
+    animation: .4s popOut forwards;
+    margin-right: 200px;
+}
+
+.image-text-item p {
+    max-width: 500px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: justify;
+    animation: .9s popOut forwards;
+}
+
+.iframe-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.google-maps-iframe{
+    margin-right: 170px;
+}
+
+.about-us-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Media query za mobilne uređaje */
+/* Media query za mobilne uređaje */
+@media only screen and (max-width: 768px) {
+    .about-us-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .image-container {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .images-with-text-container {
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .image-text-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .image-text-item img {
+        margin-right: 0;
+        margin-bottom: 10px;
+        margin-left: 80px;
+    }
+
+    /* Dodano za prikaz "Kako do nas" i mape ispod */
+    .iframe-container {
+        flex-direction: column;
+    }
+
+  
+
+    .naslov-kakodonas {
+        font-size: 18px;
+        margin-left: 100px;
+    }
+
+    .iframe-container {
+        margin-top: 20px; /* Razmak između "Kako do nas" i mape */
+    }
+
+    .google-maps-iframe {
+        width: 100%; /* Da se prilagodi širini roditeljskog elementa */
+        max-width: 300px; /* Da ne bude preširoka na manjim ekranima */
+        height: 200px; /* Da se prilagodi visini proporcionalno širini */
+        margin-top: 50px; /* Razmak između teksta i mape */
+    }
+
+    .images-with-text-container h1{
+        margin-left: 65px;
+    }
+
+
+    .text-container h1 {
+        font-size: 36px;
+    }
+
+    .naslov-kosmomi {
+        font-size: 36px;
+        margin-left: 0;
+    }
+
+    .image-text-item p {
+        max-width: 100%;
+    }
+}
+
+

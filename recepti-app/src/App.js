@@ -9,6 +9,7 @@ import Pocetna from './stranice/Pocetna';
 import Onama from './stranice/Onama';
 import Recepti from './stranice/Recepti';
 import Recept from './stranice/Recept';
+import ContactUs from './stranice/Kontakt';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/recepti" element={<Recepti />}/>
           <Route path="/about" element={<Onama />}/>
           <Route exact path="/recipe/:id" element={<Recept/>}/>
+          <Route path="/kontakt" element = {<ContactUs/>}/>
 
         </Routes>
       </div>
