@@ -19,6 +19,9 @@
     }
     padding-top: 60px;
     border-bottom-color: var(--primary-color);
+    display: flex;
+
+    
     
     .slike{
             padding-right: 1.9em;
@@ -69,39 +72,39 @@
 }
 
 
-.tabela{
-
-    box-shadow: 3px 0 5px var(--shadow-color);
-    animation: 0.5s slideInRight;
-    .tabela-naslov{
-        font-size: 1em;
-        display:block;
-        padding: 10px 5px;
-        border-left: .3em solid transparent;
-        color: var(--primary-color);
-        background-color: var(--shadow-color);
-        font-size: 1.5em;
-        animation: 0.5s slideInRight;
-    }
-    .tabela-link{
-        animation: 0.5s slideInRight;
-        height: 50px;
-        display:block;
-        padding-top: 20px;
-        padding-left: 5px;
-        border-left: .3em solid transparent;
-        color: var(--text-color);
-        font-size: 1em;
-        &.active{
-            border-left-color: var(--primary-color);
-        }
-        
-        &:hover{
-            border-left-color: var(--primary-color);
-           /*  moze a i ne mora background-color: rgba(0,0,0,0.02); */
-            color: var(--primary-color);
-            box-shadow: 3px 0 5px var(--shadow-color);;
-        }
-    }
+/*.recipes{
+    /*display: grid;
+   /* grid-template-columns: repeat(2, 1fr); /* 3 items per row */
+    /* gap: 0px; 
+    width:100%;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
+*/
+
+.recipes {
+    gap: 0px; 
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card .info {
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+
 

@@ -1,8 +1,8 @@
 import React from 'react';
-import '../stilovi/navbarDonji.css';
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import '../stilovi/footer.css';
+/*import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';*/
 
-function NavbarDonji() {
+function Footer() {
   return (
     <nav className="navbar-donji">
       <div className="navbar-donji-container">
@@ -12,22 +12,22 @@ function NavbarDonji() {
         <ul className="navbar-donji-menu">
           <li className="navbar-donji-item">
             <a href="https://www.facebook.com" className="navbar-donji-link">
-              <FaFacebook />
+              {/*<FaFacebook />*/}
             </a>
           </li>
           <li className="navbar-donji-item">
             <a href="https://www.twitter.com" className="navbar-donji-link">
-              <FaTwitter />
+              {/*<FaTwitter />*/}
             </a>
           </li>
           <li className="navbar-donji-item">
             <a href="https://www.instagram.com" className="navbar-donji-link">
-              <FaInstagram />
+              {/*<FaInstagram />*/}
             </a>
           </li>
           <li className="navbar-donji-item">
             <a href="https://www.linkedin.com" className="navbar-donji-link">
-              <FaLinkedin />
+              {/*<FaLinkedin />*/}
             </a>
           </li>
         </ul>
@@ -38,4 +38,4 @@ function NavbarDonji() {
   );
 }
 
-export default NavbarDonji;
+export default Footer;

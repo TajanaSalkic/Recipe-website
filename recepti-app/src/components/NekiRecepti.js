@@ -1,67 +1,36 @@
-import NekiReceptiSlike from "./NekiReceptiSlike"
-import Tabela from "./Tabela"
 
-import {faContactBook, faHome, faInfoCircle, faList, faSignIn} from "@fortawesome/free-solid-svg-icons"
 
-import { Link } from "react-router-dom"
-export default function NekiRecepti(){
-    
-    const images = [
-        { src: "/img/Burger.jpg", category: "FastFood", path:"/burger" },
-        { src: "/img/lunch.jpg", category: "Lunch", path:"/lunch" },
-        { src: "/img/salad.jpg", category: "Salad", path:"/salad" },
-        { src: "/img/pancakes.webp", category: "Sweets", path:"/sweets" },
-    ]  
+import React, { useState, useEffect } from 'react';
+import KarticaJelo from "./KarticaJelo";
+import "../stilovi/nekiRecepti.css"
 
-    {/*{ src: "/img/sandwich.jpg", category: "Sandwich", path:"/sandwiches" },
-        { src: "/img/macarons.jpeg", category: "Sweets", path:"/sweets" },*/}
-   
+export default function NekiRecepti() {
+    const [randomRecipes, setRandomRecipes] = useState([]);
 
-    const links=[{
-        name: "Ljuta hrana",
-        path: "/ljutahrana",
-        icon: faHome
-},
-{
-    name:"Recepti",
-    path:"/recipes",
-    icon:faList
-},
-{
-    name:"Prijava",
-    path:"/login",
-    icon: faSignIn
-},
-{
-    name: "O nama",
-    path:"/about",
-    icon: faInfoCircle
-},
-{
-    name:"Kontakt",
-    path:"/kontakt",
-    icon: faContactBook
-}]
+    useEffect(() => {
+        const fetchRecipes = async () => {
+            const recipes = [];
+            for (let i = 0; i < 6; i++) {
+                const response = await fetch("https://www.themealdb.com/api/json/v1/1/random.php");
+                const data = await response.json();
+                recipes.push(data.meals[0]); // Only take the first meal from each response
+            }
+            setRandomRecipes(recipes);
+        };
 
-    
-    return(
+        fetchRecipes();
+    }, []);
 
+    console.log('Random recipes:', randomRecipes);
+
+    return (
         <div className="section nrecepti">
             <div className="tekst">Lorem ipsum</div>
-            <div className="col1 slike">
-                {images.map(({src, category, path}, index) => (
-                    <Link to={path} key={index}>
-                        <NekiReceptiSlike imgSrc = {src} pt={"85%"} category={category}/>
-                    </Link>
+            <div className="recipes">
+                {randomRecipes.map(recipe => (
+                    <KarticaJelo key={recipe.idMeal} getMeal={{ data: recipe }} />
                 ))}
-        
+            </div>
         </div>
-            <div className="col1 tabela">
-                <Tabela links={links}/>
-                <div className="prazno"></div>
-        </div>
-                
-        
-        </div>
-    )
+    );
 }

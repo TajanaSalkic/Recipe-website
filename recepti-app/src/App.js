@@ -10,6 +10,7 @@ import Onama from './stranice/Onama';
 import Recepti from './stranice/Recepti';
 import Recept from './stranice/Recept';
 import ContactUs from './stranice/Kontakt';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
 
         </Routes>
       </div>
-      {/*<Footer/> */}
+      <Footer/> 
     </Router>
   );
 }

@@ -6,6 +6,8 @@ import "../stilovi/recept.css"
 export default function Recept(){
     const { id } = useParams();
     const [recipe, setRecipe] = useState(null);
+    const [crossedIngredients, setCrossedIngredients] = useState([]);
+
 
     useEffect(() => {
         const fetchRecipe = async () => {
@@ -53,9 +55,16 @@ export default function Recept(){
                             id={`ingredient-${index}`}
                             onChange={() => toggleIngredient(index)}
                         />
-                        <label htmlFor={`ingredient-${index}`}>
+                       { /*<label htmlFor={`ingredient-${index}`}>
                             {ingredient.measure} {ingredient.ingredient}
-                        </label>
+                        </label>*/}
+                        <label
+    htmlFor={`ingredient-${index}`}
+    className={crossedIngredients.includes(index) ? "crossed" : ""}
+>
+    {ingredient.measure} {ingredient.ingredient}
+</label>
+
                     </div>
                 ))}
                 
@@ -73,14 +82,19 @@ export default function Recept(){
                     {ingredientsFirst.map((ingredient, index) => (
                         <div className="ingredient" id={`ingredient-${index}`} key={index}>
                             <input
-                                className="check"
-                                type="checkbox"
-                                id={`ingredient-${index}`}
-                                onChange={() => toggleIngredient(index)}
-                            />
-                            <label htmlFor={`ingredient-${index}`}>
-                                {ingredient.measure} {ingredient.ingredient}
-                            </label>
+    className="check"
+    type="checkbox"
+    id={`ingredient-${index}-1`} // Use a unique id for the checkbox
+    onChange={() => toggleIngredient(index)}
+/>
+<label
+    htmlFor={`ingredient-${index}-1`} // Match the id of the checkbox
+    className={crossedIngredients.includes(index) ? "crossed" : ""}
+>
+    {ingredient.measure} {ingredient.ingredient}
+</label>
+
+
                         </div>
                     ))}
                 </ul>
@@ -89,15 +103,20 @@ export default function Recept(){
                 <ul>
                     {ingredientsSecond.map((ingredient, index) => (
                         <div className="ingredient" id={`ingredient-${index + ingredientsFirst.length}`} key={index}>
-                            <input
-                                className="check"
-                                type="checkbox"
-                                id={`ingredient-${index + ingredientsFirst.length}`}
-                                onChange={() => toggleIngredient(index + ingredientsFirst.length)}
-                            />
-                            <label htmlFor={`ingredient-${index + ingredientsFirst.length}`}>
-                                {ingredient.measure} {ingredient.ingredient}
-                            </label>
+                           <input
+    className="check"
+    type="checkbox"
+    id={`ingredient-${index + ingredientsFirst.length}-2`} // Use a unique id for the checkbox
+    onChange={() => toggleIngredient(index + ingredientsFirst.length)}
+/>
+<label
+    htmlFor={`ingredient-${index + ingredientsFirst.length}-2`} // Match the id of the checkbox
+    className={crossedIngredients.includes(index + ingredientsFirst.length) ? "crossed" : ""}
+>
+    {ingredient.measure} {ingredient.ingredient}
+</label>
+
+
                         </div>
                     ))}
                 </ul>
@@ -107,11 +126,21 @@ export default function Recept(){
     );
     
 
-    const toggleIngredient = (index) => {
+    /*const toggleIngredient = (index) => {
         const label = document.querySelector(`#ingredient-${index} label`);
         if (label) {
             label.classList.toggle('crossed');
         }
+    };*/
+
+    const toggleIngredient = (index) => {
+        const updatedIngredients = [...crossedIngredients];
+        if (updatedIngredients.includes(index)) {
+            updatedIngredients.splice(updatedIngredients.indexOf(index), 1);
+        } else {
+            updatedIngredients.push(index);
+        }
+        setCrossedIngredients(updatedIngredients);
     };
 
 

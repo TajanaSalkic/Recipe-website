@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import '../stilovi/contact.css';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
-import '../stilovi/navbarDonji.css'
-import NavbarDonji from '../components/NavbarDonji'
+/*import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';*/
+
+
 
 function ContactUs() {
     const [formData, setFormData] = useState({
@@ -73,19 +73,19 @@ function ContactUs() {
                     </form>
                 </div>
                 <div className="contact-icons">
-                <a href="tel:+123456789"><FaPhone /></a>
+                <a href="tel:+123456789">{/*<FaPhone />*/}</a>
                 <div>
                 <p>032-514-367</p>
                 <p>033-875-222</p>
                 <p>032-414-363</p>
                 </div>
-                <a href="mailto:info@example.com"><FaEnvelope /></a>
+                <a href="mailto:info@example.com">{/*<FaEnvelope />*/}</a>
                 <div>
                 <p>info@example.com</p>
                 <p>info@example.com</p>
                 <p>info@example.com</p> 
                 </div>
-                <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer"><FaMapMarkerAlt /></a>
+                <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer">{/*<FaMapMarkerAlt />*/}</a>
                     <div> {/* Dodajemo div za pravilno poravnanje */}
                          <p>Fakultetska 1</p> {/* Prva adresa */}
                          <p>Aska Borića bb</p> {/* Druga adresa */}
@@ -94,7 +94,7 @@ function ContactUs() {
 
             </div>
 
-            <NavbarDonji/>
+            
         </div>
     );
 }
