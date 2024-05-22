@@ -13,7 +13,7 @@ export default function NekiRecepti() {
             for (let i = 0; i < 6; i++) {
                 const response = await fetch("https://www.themealdb.com/api/json/v1/1/random.php");
                 const data = await response.json();
-                recipes.push(data.meals[0]); // Only take the first meal from each response
+                recipes.push(data.meals[0]); 
             }
             setRandomRecipes(recipes);
         };
@@ -25,7 +25,13 @@ export default function NekiRecepti() {
 
     return (
         <div className="section nrecepti">
-            <div className="tekst">Lorem ipsum</div>
+            <div className="tekst">Nasumično Odabrani Recepti</div>
+            <div className="tekst-uvod">
+                <div className="text-item"></div>
+                Nemate ideju što biste kuhali? Pogledajte naše nasumično odabrane recepte i pustite se da vas inspiracija ponese. 
+                Svaki put kad posjetite našu stranicu, dočekat će vas nova selekcija recepata koji će vas motivirati da isprobate nešto novo.
+                
+                </div>
             <div className="recipes">
                 {randomRecipes.map(recipe => (
                     <KarticaJelo key={recipe.idMeal} getMeal={{ data: recipe }} />

@@ -1,3 +1,5 @@
+@import "./fontovi/fontovi.css";
+
 .recipe-page {
     display: flex;
    flex-direction: column;
@@ -27,6 +29,7 @@
         width: 50%; 
         box-sizing: border-box;
         padding: 10px;
+        
     }
 
     .column2{
@@ -42,29 +45,48 @@
         box-sizing: border-box;
         padding: 10px;
     }
-
     
     .columns {
         display: flex;
         flex-wrap: wrap; 
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        background-color: #f0f0f0;
+        position: relative;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
     
 
     
     .naziv-recepta{
+
         width:100%;
         text-align: center;
         padding-top: 15px;
+        font-family: 'PisanaSlova', 'PisanaSlova', Times, serif, 'PisanaSlova';
         .porijeklo{
             padding-top: 20px;
+            font-size: 30px;
+            color: rgb(255,0,86);
         }
+    }
+
+    .naziv-recepta h1{
+        color: whitesmoke;
+        font-size: 50px;
+        background: linear-gradient(90deg, #9c0036, #fa7d7d);
+        border-radius: 8px;
     }
 
     .citat{
         width:100%;
         text-align: center;
-        padding-top: 20px;
+        color:grey;
         padding-bottom: 20px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
     }
 }
 
@@ -75,8 +97,14 @@
 
 .crossed{
     text-decoration: line-through;
+    color: rgb(255,0,86);
 }
 
+.citat p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
 .check {
     margin-right: 10px; 
     transform: scale(1.2); 
@@ -99,6 +127,7 @@ label {
 .col2.sastojci h2{
     margin-bottom: 10px !important;
     width: 25% !important;
+    
 }
 
 .video iframe {

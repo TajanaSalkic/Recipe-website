@@ -1,14 +1,26 @@
 .section.nrecepti{
     .tekst{
+        background: linear-gradient(90deg, #9c0036, #fa7d7d);
+        color: white;
+        font-family: 'PisanaSlova', 'PisanaSlova', Times, serif, 'PisanaSlova';
         width: 100%;
         padding-bottom: 35px;
         padding: 35px;
         text-align: center;
-        font-size: 50px;
+        font-size: 70px;
         border-radius: 10px;
         box-shadow: 6px 3px 5px var(--shadow-color);
         animation: .5s popOut forwards;
         background-color:aliceblue;
+    }
+
+    .recipes {
+        gap: 0px; 
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
     }
     .col1.slike{
         padding-top: 35px;
@@ -19,8 +31,19 @@
     }
     padding-top: 60px;
     border-bottom-color: var(--primary-color);
-    display: flex;
-
+    .tekst-uvod{
+        text-align: center;
+        text-align: justify;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 0;
+        border: 2px solid rgb(255, 0, 86); /* Dodajemo okvir */
+        border-radius: 10px; /* Dodajemo zaobljenost ivica */
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        animation: .9s popOut forwards;
+        padding: 15px;
+    }
     
     
     .slike{
@@ -70,28 +93,6 @@
     font-weight: bold;
     text-transform: uppercase;
 }
-
-
-/*.recipes{
-    /*display: grid;
-   /* grid-template-columns: repeat(2, 1fr); /* 3 items per row */
-    /* gap: 0px; 
-    width:100%;
-    margin:0 auto;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-*/
-
-.recipes {
-    gap: 0px; 
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-}
-
 
 
 .card img {

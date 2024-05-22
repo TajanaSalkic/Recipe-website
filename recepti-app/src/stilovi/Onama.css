@@ -1,3 +1,7 @@
+@import "./fontovi/fontovi.css";
+@import "./animacije/animacije.css";
+
+
 .about-us-container {
     display: flex;
     align-items: center;
@@ -23,11 +27,6 @@
     max-width: 100%;
     border-radius: 5px;
     animation: .4s popOut forwards;
-}
-
-@font-face {
-    font-family: 'PisanaSlova';
-    src: url('/public/fonts/Simple-Farmhouse.ttf') format('truetype');
 }
 
 .text-container h1 {

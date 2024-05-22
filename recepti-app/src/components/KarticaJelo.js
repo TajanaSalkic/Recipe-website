@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import '../stilovi/style.css';
+import '../stilovi/recepti.css';
 
 export default function KarticaJelo({ getMeal }){
     console.log(getMeal.data);

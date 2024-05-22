@@ -157,9 +157,9 @@ export default function Recept(){
             </div>
 
             <div className="citat">
-                <p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
+                <p>Kuhanje je putovanje, a recepti su vaša karta. Krenite na kulinarsku avanturu s nama i otkrijte nove svjetove okusa. </p>
             </div>
-
+            
             <div className="columns">
     <div className="col2 slika">
         <img src={recipe.strMealThumb} alt={recipe.strMeal} />

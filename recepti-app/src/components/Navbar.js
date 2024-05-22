@@ -45,9 +45,7 @@ export default function Navbar(){
                 {links.map(link => (
                     <Link to={link.path} className={ location.pathname === link.path ? "active" : ""} key={link.name}>{link.name}</Link>
                 ))}
-               { /*<a href="#!">Home</a>
-                <a href="#!">Recipes</a>
-                <a href="#!">Settings</a>*/}
+             
             </div>
             <div onClick={() => setShowSidebar(true)} className={showSidebar ? "sidebar-btn active" : "sidebar-btn"}>
                     <div className="bar"></div>

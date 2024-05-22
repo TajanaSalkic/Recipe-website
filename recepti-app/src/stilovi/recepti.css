@@ -1,21 +1,33 @@
+@import "./animacije/animacije.css";
+@import "./fontovi/fontovi.css";
 
 .heading h1{
-    color:grey;
-    font-size: 48px;
+    font-size: 70px;
+    font-family: 'PisanaSlova', 'PisanaSlova', Times, serif, 'PisanaSlova';
+    color: rgb(255,0,86);
     font-weight:900;
     letter-spacing: 1px;
-  
     text-align: center;
+    padding-top: 0px !important;
+    animation: slideIn2 .9s forwards;
 }
 .heading h4{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+    padding-top: 15px;
     color:grey;
     text-align: center;
+    animation: slideIn .9s forwards;
 }
 .searchBox{
     text-align: center;
     margin:3rem;
-    
+    animation: slideIn2 .9s forwards;
 }
+
+
+
+
 .search-bar{
     width:400px;
     height:40px;
@@ -23,13 +35,15 @@
     outline:none;
     border-radius: 20px;
     padding: 0.3rem 1rem;
-    background-color: grey;
+    background: linear-gradient(90deg, #9c0036, #fa7d7d) transparent;
     color:white;
+
 }
 .notSearch{
     font-size: 35px;
     color: grey;
     font-weight:900;
+    animation: slideIn2 .9s forwards;
 }
 .contain{
     width:80%;
@@ -37,6 +51,7 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+
 }
 .card{
     width:274px;

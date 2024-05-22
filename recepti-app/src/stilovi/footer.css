@@ -1,17 +1,5 @@
-@keyframes slideIn {
-    from {
-        transform: translateX(100%);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
-
-@font-face {
-    font-family: 'PisanaSlova';
-    src: url('/public/fonts/Simple-Farmhouse.ttf') format('truetype');
-    /* Dodatne opcije fonta (npr. font-weight, font-style) mogu se specificirati ovdje */
-}
+@import "./animacije/animacije.css";
+@import "./fontovi/fontovi.css";
 
 .navbar-donji {
     background-color: rgb(255,0,86);
@@ -20,7 +8,7 @@
     width: 100%;
     margin-top: 50px;
     bottom: 0;
-    animation: slideIn .9s forwards;
+    animation: slideIn2 .9s forwards;
 }
 
 .navbar-donji-container {

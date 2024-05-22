@@ -78,6 +78,8 @@ a{
             }
         }
     }
+
+
 }
 
 @media screen and (max-width: 768px){
@@ -121,31 +123,43 @@ a{
         }
     }
 
-    .tabela{
-        top: 0;
-        left: 0;
-        box-shadow: 3px 0 5px var(--shadow-color);
-        animation: 0.5s slideInLeft;
-    
-        .tabela-link{
-            display:block;
-            padding: 10px 5px;
-            border-left: .3em solid transparent;
-            color: var(--text-color);
-            font-size: 1.2em;
-            &.active{
-                border-left-color: var(--primary-color);
-            }
-            
-            &:hover{
-                border-left-color: var(--primary-color);
-               /*  moze a i ne mora background-color: rgba(0,0,0,0.02); */
-                color: var(--primary-color);
-                box-shadow: 3px 0 5px var(--shadow-color);;
-            }
-        }
+
+    .search-bar{
+        width:350px !important;
+        
     }
     
+    .video iframe {
+        border-radius: 10px;
+        width: 400px !important;
+        height: 250px !important;
+    }
+
+    /*.col2{
+        width: 100% !important;
+    }*/
+
+    .columns {
+        flex-direction: column !important;
+    }
+
+
+    .col2.sastojci {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .column1 {
+        width: 100% !important; /* Each column takes up the full width */
+        
+    }
+
+    .column2 {
+        width: 100% !important; /* Each column takes up the full width */
+        padding-top: 0 !important;
+    }
     
     
     
