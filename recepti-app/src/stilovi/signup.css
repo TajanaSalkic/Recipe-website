@@ -4,7 +4,7 @@
 @import "./fontovi/fontovi.css";
 
 
-.contact-us-wrapper {
+.signup {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,7 +14,7 @@
 }
 
 
-.contact-us-container {
+.signup-form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,33 +27,29 @@
     animation: slideIn 1s ease-in-out;
 }
 
-.contact-us-container h1 {
+.signup h1 {
     font-size: 70px;
     color: white;
     font-family: 'PisanaSlova', 'PisanaSlova', Times, serif, 'PisanaSlova';
     margin-bottom: 20px;
 }
 
-.contact-us-container p {
+.signup-form p {
     font-size: 18px;
     color: white;
     text-align: center;
     margin-bottom: 10px;
 }
 
-.contact-form {
+
+.signup-form form {
     width: 100%;
-}
-
-
-
-.contact-form form {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.contact-form label {
+.signup-form label {
     align-self: flex-start;
     font-size: 18px;
     margin-bottom: 5px;
@@ -61,8 +57,8 @@
     width: 100%;
 }
 
-.contact-form input,
-.contact-form textarea {
+.signup-form input,
+.signup-form textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
@@ -71,7 +67,7 @@
     font-size: 16px;
 }
 
-.contact-form button {
+.signup-form button {
     width: 50%;
     padding: 10px;
     border: none;
@@ -86,11 +82,11 @@
     position: relative;
 }
 
-.contact-form button:hover {
+.signup-form button:hover {
     background-color: #e43e7b;
 }
 
-.contact-form button::after {
+.signup-form button::after {
     content: '';
     position: absolute;
     width: calc(100% + 150px); /* Povećavamo širinu linije za 40px kako bi bila duža od dugmeta */
@@ -137,7 +133,7 @@
 
 
 @media only screen and (max-width : 768px) {
-    .contact-us-container h1 {
+    .signup h2 {
         font-size: 40px; /* Smanjite veličinu fonta za naslov na manjem ekranu */
         margin-bottom: 10px; /* Smanjite razmak ispod naslova */
     }

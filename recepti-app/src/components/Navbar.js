@@ -17,6 +17,11 @@ export default function Navbar(){
     },
     {
         name:"Prijava",
+        path:"/prijava",
+        icon: faSignIn
+    },
+    {
+        name:"Login",
         path:"/login",
         icon: faSignIn
     },

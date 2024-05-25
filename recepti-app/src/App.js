@@ -11,6 +11,8 @@ import Recepti from './stranice/Recepti';
 import Recept from './stranice/Recept';
 import ContactUs from './stranice/Kontakt';
 import Footer from './components/Footer';
+import Prijava from './stranice/Prijava';
+import Login from './components/Login';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Pocetna />}/>
           <Route path="/recepti" element={<Recepti />}/>
+          <Route path="/prijava" element={<Prijava />}/>
+          <Route path="/login" element={<Login />}/>
           <Route path="/about" element={<Onama />}/>
           <Route exact path="/recipe/:id" element={<Recept/>}/>
           <Route path="/kontakt" element = {<ContactUs/>}/>
