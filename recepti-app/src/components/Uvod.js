@@ -1,3 +1,34 @@
+/*import UvodSlika from "./UvodSlika.js"
+
+export default function Uvod(){
+    const images = [
+        "/img/Burger.jpg",
+        "/img/lunch.jpg",
+        "/img/salad.jpg",
+        "/img/sandwich.jpg",
+        "/img/tacos.png",
+        "/img/cake.png",
+        "/img/macarons.jpeg",
+        "img/oatmeal.avif",
+        "/img/pancakes.webp"
+    ]  
+    return(
+        <div className="section uvod">
+            <div className="col tekst">
+                <h1 className="naslov">Pronađite Savršen Recept za Svaki Obrok</h1>
+                <p className="info">Naša stranica nudi širok izbor recepata za svaki ukus i priliku. Bez obzira jeste li početnik u kuhinji ili iskusni kuhar, ovdje ćete pronaći inspiraciju za svoje kulinarske avanture. Naša baza podataka sadrži stotine recepata, od jednostavnih jela do gurmanskih delicija, koje možete pripremiti za sebe, svoju obitelj i prijatelje. </p>
+                <button className="btn">Explore now</button>
+            </div>
+            <div className="col slike">
+                {images.map((src, index) => (
+                    <UvodSlika key ={index} imgSrc = {src} pt={"85%"}/>
+                ))}
+                
+                
+            </div>
+        </div>
+    )
+}*/
 
 import React from "react";
 import { useNavigate } from "react-router-dom";
