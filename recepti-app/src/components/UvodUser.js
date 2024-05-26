@@ -2,9 +2,11 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import UvodSlika from "./UvodSlika.js";
+import { useParams } from 'react-router-dom';
 
-export default function Uvod() {
+export default function UvodUser() {
     const navigate = useNavigate();
+    const {email} = useParams();
     const images = [
         "/img/Burger.jpg",
         "/img/lunch.jpg",
@@ -18,7 +20,7 @@ export default function Uvod() {
     ];
 
     const handleButtonClick = () => {
-        navigate("/recepti");
+        navigate(`/${email}/recepti`);
     };
 
     return (

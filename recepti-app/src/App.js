@@ -22,6 +22,7 @@ import Admin from './stranice/Admin'
 import OnamaUser from './stranice/OnamaUser'
 import ContactUsUser from './stranice/KontaktUser';
 import ReceptUser from './stranice/ReceptUser';
+import Omiljeni from './stranice/Omiljeni';
 
 
 function App() {
@@ -40,12 +41,14 @@ function App() {
           <Route path="/login" element={<Login />}/>
           <Route path="/about" element={<Onama />}/>
           <Route path="/:email/about" element={<OnamaUser />}/>
-          
+          <Route exact path="/undefined/recipe/:id" element={<Recept/>}/>
           <Route exact path="/:email/recipe/:id" element={<ReceptUser/>}/>
           <Route path="/kontakt" element = {<ContactUs/>}/>
           <Route path="/:email/kontakt" element = {<ContactUsUser/>}/>
           <Route path="/admin" element={<AdminPage />} />  
           <Route path="/:email" element={<UserPage />} /> 
+          <Route path="/:email/omiljeno" element={<Omiljeni />}/>
+          
         </Routes>
       </div>
       <Footer/> 
