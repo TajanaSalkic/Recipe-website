@@ -1,6 +1,6 @@
 import React from "react";
 import '../stilovi/signup.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import {auth, googleProvider} from '../stranice/firebase-config'
 import { createUserWithEmailAndPassword, signInWithPopup, signOut } from 'firebase/auth';
@@ -14,6 +14,7 @@ const SignUpForm = () => {
     const [password, setPassword]= useState("");
 
     const [error, setError] = useState("");
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -24,6 +25,7 @@ const SignUpForm = () => {
         try{
             await createUserWithEmailAndPassword(auth, email, password);
             console.log("User created");
+            navigate('/')
         }catch(err){
             console.error(err);
             setError(err.message);

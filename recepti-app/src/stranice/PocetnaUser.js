@@ -1,10 +1,10 @@
 import Uvod from "../components/Uvod.js"
 import NekiRecepti from '../components/NekiRecepti.js';
-import Navbar from "../components/Navbar.js";
-export default function Pocetna(){
+import NavbarUser from "../components/NavbarUser.js";
+export default function PocetnaUser(){
     return(
         <div>
-            <Navbar/>
+            <NavbarUser/>
              <Uvod/>
         <NekiRecepti/>
         </div>

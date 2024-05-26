@@ -1,7 +1,7 @@
 /*import React, { useState } from 'react';*/
 import '../stilovi/contact.css';
 /*import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';*/
-import Navbar from '../components/Navbar';
+import NavbarUser from '../components/NavbarUser';
 
 /*
 function ContactUs() {
@@ -106,7 +106,7 @@ import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import useWeb3Forms from "@web3forms/react";
 
-export default function ContactUs() {
+export default function ContactUsUser() {
   const {
     register,
     handleSubmit,
@@ -142,7 +142,7 @@ export default function ContactUs() {
   });
 
   return (
-      <><Navbar/>
+      <><NavbarUser/>
         <div className="contact-us-wrapper">
             <div className="contact-us-container">
                 <h1>Kontakt</h1>

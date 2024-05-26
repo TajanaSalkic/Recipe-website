@@ -2,10 +2,10 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "../stilovi/recept.css"
-import Navbar from "../components/Navbar"
+import NavbarUser from "../components/NavbarUser"
 
 
-export default function Recept(){
+export default function ReceptUser(){
     const { id } = useParams();
     const [recipe, setRecipe] = useState(null);
     const [crossedIngredients, setCrossedIngredients] = useState([]);
@@ -152,7 +152,7 @@ export default function Recept(){
     };
 
     return (
-        <><Navbar/>
+        <><NavbarUser/>
         <div className="recipe-page">
             <div className="naziv-recepta">
                 <h1>{recipe.strMeal}</h1>

@@ -1,3 +1,11 @@
+.navbar.container{
+    padding-inline: 0vw !important;
+    margin-bottom: 30px;
+}
+
+.main{
+    padding-block: 0vw !important;
+}
 
 .navbar{
     height: 55px;
@@ -127,5 +135,22 @@ ucitavaju jedan po jedan a ne svi odjednom*/
             box-shadow: 3px 0 5px var(--shadow-color);;
         }
     }
+}
+
+@media screen and (max-width: 768px){
+    .navbar{
+        
+        .nav-links{
+            display: none;
+        }
+
+        .sidebar-btn{
+            display: block;
+        }
+    }
+
+    
+    
+    
 }
 

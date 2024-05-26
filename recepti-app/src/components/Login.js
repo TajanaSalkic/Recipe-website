@@ -1,6 +1,6 @@
 import React from "react";
 import '../stilovi/signup.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import {auth} from '../stranice/firebase-config'
 import { signInWithEmailAndPassword, signOut} from 'firebase/auth';
@@ -14,6 +14,7 @@ const Login = () => {
     const [password, setPassword]= useState("");
 
     const [error, setError] = useState("");
+    const navigate = useNavigate();
 
     console.log(auth?.currentUser?.email);
 
@@ -24,8 +25,16 @@ const Login = () => {
             return;
         }
         try{
+            if (email === "admin@gmail.com" && password === "adminadmin") {
+                console.log("Admin logged in");
+                navigate(`/admin`);
+                return;
+        }
+                
             await signInWithEmailAndPassword(auth, email, password);
             console.log(" Logged in");
+            const encodedEmail = encodeURIComponent(email);
+            navigate(`/${encodedEmail}/`);
         }catch(err){
             console.error(err);
             setError(err.message);

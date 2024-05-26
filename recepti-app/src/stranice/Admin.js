@@ -1,4 +1,4 @@
-/* stranoica na kojoj ce admin dobiti sve korisnike i gdje ce moci da ih izbrise
+/*stranoica na kojoj ce admin dobiti sve korisnike i gdje ce moci da ih izbrise
 import { useState , useEffect} from "react"
 import {db} from './firebase-config';
 import {collection, getDocs, addDoc,deleteDoc,doc} from 'firebase/firestore';
@@ -63,6 +63,38 @@ export default function Admin(){
             
         </div>
     )
+}*/
+
+
+import NavbarAdmin from "../components/NavbarAdmin"
+export default function Admin(){
+    //chatgpt admin
+/*
+const admin = require('firebase-admin');
+const serviceAccount = require('./serviceAccountKey.json');
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount)
+});
+
+const getAuth = admin.auth;
+
+const uid = 'oXkB3GQYLcfxktEpsuPsMzpdqzr2'; // Replace with the UID of the user you want to fetch
+
+getAuth().getUser(uid)
+  .then((userRecord) => {
+    // See the UserRecord reference doc for the contents of userRecord.
+    console.log(`Successfully fetched user data: ${JSON.stringify(userRecord.toJSON(), null, 2)}`);
+  })
+  .catch((error) => {
+    console.error('Error fetching user data:', error);
+  });*/
+    return(
+        
+       <> <NavbarAdmin/>
+        <div> Hi</div>
+        </>
+    )
 }
-*/
+
 

@@ -33,20 +33,19 @@ a{
 
 /*Neki Recepti*/
 
-@import "./navbar.css";
 
 @import "./uvod.css";
-
+@import "./navbar.css";
 .main{
-    padding-block: 3vw;
+    padding-block: 10vw;
 }
 
-.container{
-    padding-inline: 10vw;
+.containers{
+    padding-inline: 10vw !important;
 }
 
 @media screen and (max-width: 1280px){
-    .cointainer{
+    .cointainers{
         padding-inline: 18vw;
     }
 }
