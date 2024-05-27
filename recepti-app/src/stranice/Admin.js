@@ -1,100 +1,204 @@
-/*stranoica na kojoj ce admin dobiti sve korisnike i gdje ce moci da ih izbrise
-import { useState , useEffect} from "react"
+//stranoica na kojoj ce admin dobiti sve korisnike i gdje ce moci da ih izbrise
+/*import { useState , useEffect} from "react"
 import {db} from './firebase-config';
 import {collection, getDocs, addDoc,deleteDoc,doc} from 'firebase/firestore';
-
-export default function Admin(){
-
-    const [newusername, setNewUsername] = useState("")
-    const [newemail, setNewEmail] = useState("")
-    const [newpassword, setNewPassword] = useState("")
-
-    const [korisnici, setKorisnici]= useState([]);
-    const korisniciCollectionRef = collection(db,"Korisnici");
-    
-    const createKorisnik = async() => {
-        await addDoc(korisniciCollectionRef, {
-            username: newusername,
-            email: newemail,
-            password: newpassword
-        });
-    }
-
-    const deleteKorisnik = async(id) => {
-        await deleteDoc(doc(db, "Korisnici", id));
-    }
-    
-    useEffect(()=>{
-         const getKorisnici = async () =>{
-                  const data = await getDocs(korisniciCollectionRef);
-                  setKorisnici(data.docs.map((doc) => ({ ...doc.data(), id:doc.id})));
-         }; 
-         getKorisnici();
-     }, []);
-
-    return(
-        <div className="Prijava">
-            <input placeholder="Username..." 
-            onChange={(event)=>{
-                setNewUsername(event.target.value);
-                }}
-            />
-            <input placeholder="Email..."
-                onChange={(event)=>{
-                    setNewEmail(event.target.value);
-                    }}
-            />
-            <input placeholder="Password..."
-                onChange={(event)=>{
-                    setNewPassword(event.target.value);
-                    }}
-            />
-
-            <button onClick={createKorisnik}>Create</button>{
-             korisnici.map((korisnik) => {
-             return <div> 
-                {" "}
-                <h1>Username: {korisnik.username}</h1>
-                <h1>Email: {korisnik.email}</h1>
-                <h1>Password: {korisnik.password}</h1>
-                <button onClick={()=> {deleteKorisnik(korisnik.id)}}>Delete</button>
-                </div>
-        })}
-            
-        </div>
-    )
-}*/
-
-
 import NavbarAdmin from "../components/NavbarAdmin"
-export default function Admin(){
-    //chatgpt admin
-/*
+
+import { getAuth, deleteUser } from "firebase/auth";
+const functions = require('firebase-functions');
 const admin = require('firebase-admin');
-const serviceAccount = require('./serviceAccountKey.json');
 
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount)
-});
+const AdminPage = () => {
+ const [users, setUsers] = useState([]);
+  const functions = getFunctions();
 
-const getAuth = admin.auth;
+  useEffect(() => {
+    const fetchUsers = async () => {
+      const usersCollection = collection(db, "users");
+      const usersSnapshot = await getDocs(usersCollection);
+      const usersList = usersSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+      setUsers(usersList);
+    };
 
-const uid = 'oXkB3GQYLcfxktEpsuPsMzpdqzr2'; // Replace with the UID of the user you want to fetch
+    fetchUsers();
+  }, []);
 
-getAuth().getUser(uid)
-  .then((userRecord) => {
-    // See the UserRecord reference doc for the contents of userRecord.
-    console.log(`Successfully fetched user data: ${JSON.stringify(userRecord.toJSON(), null, 2)}`);
-  })
-  .catch((error) => {
-    console.error('Error fetching user data:', error);
-  });*/
-    return(
-        
-       <> <NavbarAdmin/>
-        <div> Hi</div>
-        </>
-    )
-}
+  const handleDelete = async (userId) => {
+    try {
+      // Call a cloud function to delete the user from Firebase Auth
+      const deleteUserFunction = httpsCallable(functions, 'deleteUser');
+      await deleteUserFunction({ uid: userId });
+      
+      // Delete the user document from Firestore
+      await deleteDoc(doc(db, "users", userId));
+      
+      // Update the local state
+      setUsers(users.filter(user => user.id !== userId));
+    } catch (error) {
+      console.error("Error deleting user: ", error);
+    }
+  };
 
+  return (
+    <div>
+      <h1>Admin Page - List of Users</h1>
+      <ul>
+        {users.map(user => (
+          <li key={user.id}>
+            {user.name} ({user.email})
+            <button onClick={() => handleDelete(user.id)}>Delete</button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
 
+export default AdminPage;*/
+/*<ul>
+        {users.map(user => (
+          <li key={user.id}>
+            {user.name} ({user.email})
+            <button onClick={() => handleDelete(user.id)}>Delete</button>
+          </li>
+        ))}
+      </ul>*/
+/*chatgpt
+      import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { collection, getDocs } from 'firebase/firestore';
+import { auth, db } from '../stranice/firebase-config';
+//import '../stilovi/korisnici.css';
+
+const Admin = () => {
+  const [users, setUsers] = useState([]);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const fetchUsers = async () => {
+      const userCollection = collection(db, 'users');
+      const userSnapshot = await getDocs(userCollection);
+      const userList = userSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+      setUsers(userList);
+    };
+
+    if (auth.currentUser?.email == 'admin@gmail.com') {
+      fetchUsers();
+    } else {
+      fetchUsers();
+    }
+  }, [navigate]);
+
+  return (
+    
+    <div className="korisnici">
+      <h1>Users List</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Email</th>
+            <th>Other Info</th>
+          </tr>
+        </thead>
+        <tbody>
+          {users.map(user => (
+            <tr key={user.id}>
+              <td>{user.id}</td>
+              <td>{user.email}</td>
+              <td>{user.otherInfo}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+};
+
+export default Admin;
+*/
+//stranoica na kojoj ce admin dobiti sve korisnike i gdje ce moci da ih izbrise
+/*
+import { useState , useEffect} from "react"
+import {auth, db} from './firebase-config';
+import {collection, getDocs, addDoc,deleteDoc,doc} from 'firebase/firestore';
+import {app} from './firebase-config';
+
+export default function Admin(){
+/*  firebase.auth().onAuthStateChanged(user => {
+    if (user) {
+      // User is signed in.
+      // Perform the Firebase operation here.
+    } else {
+      // No user is signed in.
+      console.error('User is not authenticated');
+    }
+  });*/import React, { useEffect, useState } from 'react';
+  import { collection, getDocs, deleteDoc, doc, addDoc } from 'firebase/firestore';
+  import { db } from '../stranice/firebase-config';
+  
+  const Admin = () => {
+      const [users, setUsers] = useState([]);
+      const [loading, setLoading] = useState(true);
+      const [error, setError] = useState(null);
+  
+      useEffect(() => {
+          const fetchUsers = async () => {
+              try {
+                  const userCollection = collection(db, "users");
+                  const userSnapshot = await getDocs(userCollection);
+                  const userList = userSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+                  setUsers(userList);
+              } catch (err) {
+                  setError(err.message);
+              } finally {
+                  setLoading(false);
+              }
+          };
+  
+          fetchUsers();
+      }, []);
+  
+      const handleDelete = async (userId, email) => {
+          try {
+              // Delete the user document
+              await deleteDoc(doc(db, "users", userId));
+              setUsers(users.filter(user => user.id !== userId));
+  
+              // Add the email to the blacklist collection
+              await addDoc(collection(db, "blacklist"), { email });
+  
+          } catch (err) {
+              console.error("Error deleting user:", err);
+              setError(err.message);
+          }
+      };
+  
+      if (loading) {
+          return <div>Loading...</div>;
+      }
+  
+      if (error) {
+          return <div>Error: {error}</div>;
+      }
+  
+      return (
+          <div className="user-list">
+              <h1>User List</h1>
+              <ul>
+                  {users.length > 0 ? (
+                      users.map(user => (
+                          <li key={user.id}>
+                              {user.email}
+                              <button onClick={() => handleDelete(user.id, user.email)}>Delete</button>
+                          </li>
+                      ))
+                  ) : (
+                      <li>No users found</li>
+                  )}
+              </ul>
+          </div>
+      );
+  };
+  
+  export default Admin;

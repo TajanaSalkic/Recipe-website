@@ -2,20 +2,15 @@
 
 import { initializeApp } from "firebase/app";
 
+import { signInWithEmailAndPassword } from "firebase/auth";
 //import { getAnalytics } from "firebase/analytics";
 
-import { getFirestore } from "@firebase/firestore";
+import { getFirestore } from "firebase/firestore";
 import {getAuth, GoogleAuthProvider} from 'firebase/auth'
 
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-
 //Promijeniti apikey radi sigurnosti
-
-/*const firebaseConfig = {
+/*
+const firebaseConfig = {
   apiKey: "AIzaSyDPd7RVC6iigayhlysJeY15-ZO3jE4MFv8",
   authDomain: "wd-projekat-st.firebaseapp.com",
   projectId: "wd-projekat-st",
@@ -23,6 +18,17 @@ import {getAuth, GoogleAuthProvider} from 'firebase/auth'
   messagingSenderId: "734080100337",
   appId: "1:734080100337:web:f80257c6ea1fa8894f8650",
   measurementId: "G-56DL638E9L"
+};*/
+//sara10
+/*
+const firebaseConfig = {
+  apiKey: "AIzaSyBJD49h3II-xKkf1JekekEsYJ5U62aLHhg",
+  authDomain: "wdpriv-fa79a.firebaseapp.com",
+  projectId: "wdpriv-fa79a",
+  storageBucket: "wdpriv-fa79a.appspot.com",
+  messagingSenderId: "999762016301",
+  appId: "1:999762016301:web:09e7d6022a5150435f20a4",
+  measurementId: "G-WTDSB718LG"
 };*/
 
 const firebaseConfig = {
@@ -36,6 +42,10 @@ const firebaseConfig = {
 };
 
 
+
+
+
+
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
 
@@ -44,5 +54,7 @@ export const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 
 //export const db = getFirestore(app);
+export const db = getFirestore(app);
+
 
 export const googleProvider= new GoogleAuthProvider();

@@ -4,7 +4,6 @@ import SidebarUserAdmin from "./SidebarUserAdmin"
 import { useParams } from 'react-router-dom';
 
 import {faContactBook, faHome, faInfoCircle, faList} from "@fortawesome/free-solid-svg-icons"
-//import { auth, signOut } from "../stranice/firebase-config";
 import { signOut} from 'firebase/auth';
 import { auth } from "../stranice/firebase-config";
 export default function NavbarUser() {
@@ -32,6 +31,12 @@ export default function NavbarUser() {
         {
             name: "Kontakt",
             path: `/${email}/kontakt`,
+            icon: faContactBook,
+        },
+
+        {
+            name: "Omiljeno",
+            path: `/${email}/omiljeno`,
             icon: faContactBook,
         },
     ];
