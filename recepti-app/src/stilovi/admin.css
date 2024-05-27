@@ -1,0 +1,79 @@
+@import "./fontovi/fontovi.css";
+
+
+.user-list {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+
+
+.user-list h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'PisanaSlova', 'PisanaSlova', Times, serif, 'PisanaSlova';
+    color: rgb(255,0,86);
+    animation: .9s popOut forwards;
+}
+
+.user-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.user-list li {
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: slideIn 0.5s forwards;
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.user-list li:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.user-list li:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.user-list li:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+/* Add more nth-child selectors if you expect more users */
+.user-list li:nth-child(n+4) {
+    animation-delay: calc(0.2s + (var(--i) * 0.1s));
+}
+
+.user-list button {
+    background-color: #ff4c8b;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.user-list button:hover {
+    background-color: #e43e7b;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

@@ -149,7 +149,7 @@ export default function ContactUs() {
                 <p>Vaše mišljenje je važno za nas, stoga ne ustručavajte se kontaktirati nas radi bilo kakvih pitanja ili povratnih informacija.</p>
                 <div className="contact-form">
                     <form onSubmit={handleSubmit(onSubmit)}>
-                        <div>
+                        <div className="UnosArea">
                             <input type="text" placeholder="Full Name"
                             autoComplete="false"
                             {...register("name", {
@@ -165,7 +165,7 @@ export default function ContactUs() {
                             )}
                         </div>
   
-                        <div>
+                        <div className="UnosArea">
                             <label htmlFor="email_address">
                             
                                 <input id="email_address" type="email"
@@ -190,7 +190,7 @@ export default function ContactUs() {
                                     }
                         </div>
   
-                        <div>
+                        <div className="UnosArea">
                             <textarea name="message" placeholder="Your Message"
                             {...register("message", {
                             required: "Please enter a message",

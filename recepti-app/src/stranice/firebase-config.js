@@ -20,7 +20,7 @@ const firebaseConfig = {
   measurementId: "G-56DL638E9L"
 };*/
 //sara10
-/*
+
 const firebaseConfig = {
   apiKey: "AIzaSyBJD49h3II-xKkf1JekekEsYJ5U62aLHhg",
   authDomain: "wdpriv-fa79a.firebaseapp.com",
@@ -29,8 +29,8 @@ const firebaseConfig = {
   messagingSenderId: "999762016301",
   appId: "1:999762016301:web:09e7d6022a5150435f20a4",
   measurementId: "G-WTDSB718LG"
-};*/
-
+};
+/*
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
@@ -39,7 +39,7 @@ const firebaseConfig = {
   messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
   appId: process.env.REACT_APP_FIREBASE_APP_ID,
   measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
-};
+};*/
 
 
 

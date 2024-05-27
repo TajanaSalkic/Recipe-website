@@ -32,9 +32,6 @@ export default function Onama() {
                     U našem timu okupljamo stručnjake iz područja prehrane i gastronomije koji su predani stvaranju sadržaja koji će obogatiti vaše kulinarsko iskustvo. Bez obzira jeste li početnik u kuhinji ili iskusni kuhar, naša stranica je tu da vam pruži podršku i inspiraciju na svakom koraku vašeg kulinarskog putovanja. 
                     </p>
                     <p>
-                    Zajedno istražujemo svijet okusa i mirisa, stvarajući zajednicu koja cijeni ljepotu i zadovoljstvo koje donosi priprema hrane.
-                    </p>
-                    <p>
                     Naš tim se sastoji od pet strastvenih pojedinaca, svaki sa svojim jedinstvenim pristupom kuhinji i bogatim iskustvom. Tu su Emily, stručnjakinja za slatkiše koja obožava eksperimentirati s desertima; Mark, majstor roštilja i ljubitelj mesnih delicija; Sarah, kreativna kuharica koja voli istraživati ​​svjetske kuhinje; David, entuzijastični nutricionist koji promiče zdravu prehranu; 
                     i Ana, stručnjakinja za pripremu egzotičnih jela i začinjene delicije.
                     </p>

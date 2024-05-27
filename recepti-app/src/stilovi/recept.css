@@ -1,5 +1,32 @@
 @import "./fontovi/fontovi.css";
 
+
+.recept h2{
+    font-size: 60px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'PisanaSlova', 'PisanaSlova', Times, serif, 'PisanaSlova';
+    color: rgb(255,0,86);
+    animation: .9s popOut forwards;
+}
+
+.recept p{
+    text-align: justify;
+    animation: .9s popOut forwards;
+}
+
+
+.recept{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgb(255, 0, 86); /* Dodajemo okvir */
+    border-radius: 10px; /* Dodajemo zaobljenost ivica */
+    padding: 15px;
+}
+
+
+
 .recipe-page {
     display: flex;
    flex-direction: column;

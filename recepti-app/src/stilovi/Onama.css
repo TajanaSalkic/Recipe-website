@@ -26,6 +26,7 @@
 .image-container img {
     max-width: 100%;
     border-radius: 5px;
+    margin-top: 55px;
     animation: .4s popOut forwards;
 }
 
@@ -41,6 +42,7 @@
     margin-bottom: 22px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: justify;
+    font-size: 15px;
     animation: .9s popOut forwards;
 }
 
@@ -68,16 +70,6 @@
     animation: .9s popOut forwards;
 }
 
-.naslov-kakodonas{
-    color: rgb(255,0,86);
-    font-size: 50px;
-    margin-left: 120px;
-    margin-right: 150px;
-    font-family: 'PisanaSlova', 'PisanaSlova', Times, serif, 'PisanaSlova';
-    animation: .9s popOut forwards;
-
-}
-
 
 
 .image-text-item img {
@@ -103,6 +95,18 @@
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+.iframe-container h1{
+    color: rgb(255,0,86);
+    font-size: 70px;
+    margin-left: 120px;
+    margin-right: 150px;
+    margin-top: 15px;
+    font-family: 'PisanaSlova', 'PisanaSlova', Times, serif, 'PisanaSlova';
+    animation: .9s popOut forwards;
+}
+
+
 .google-maps-iframe{
     margin-right: 170px;
 }

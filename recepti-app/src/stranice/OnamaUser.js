@@ -32,9 +32,6 @@ export default function OnamaUser() {
                     U našem timu okupljamo stručnjake iz područja prehrane i gastronomije koji su predani stvaranju sadržaja koji će obogatiti vaše kulinarsko iskustvo. Bez obzira jeste li početnik u kuhinji ili iskusni kuhar, naša stranica je tu da vam pruži podršku i inspiraciju na svakom koraku vašeg kulinarskog putovanja. 
                     </p>
                     <p>
-                    Zajedno istražujemo svijet okusa i mirisa, stvarajući zajednicu koja cijeni ljepotu i zadovoljstvo koje donosi priprema hrane.
-                    </p>
-                    <p>
                     Naš tim se sastoji od pet strastvenih pojedinaca, svaki sa svojim jedinstvenim pristupom kuhinji i bogatim iskustvom. Tu su Emily, stručnjakinja za slatkiše koja obožava eksperimentirati s desertima; Mark, majstor roštilja i ljubitelj mesnih delicija; Sarah, kreativna kuharica koja voli istraživati ​​svjetske kuhinje; David, entuzijastični nutricionist koji promiče zdravu prehranu; 
                     i Ana, stručnjakinja za pripremu egzotičnih jela i začinjene delicije.
                     </p>
@@ -69,9 +66,7 @@ export default function OnamaUser() {
             </div>
 
             <div className="iframe-container">
-            <div className="naslov-kakodonas">
                         <h1>Gdje se <br></br>nalazimo?</h1>
-                </div>
                 <iframe className="google-maps-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2860.402780810643!2d17.9010335760328!3d44.19877017108148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475ee2423f1ab2d3%3A0x6740c6af1734d8b0!2sMa%C5%A1inski%20fakultet%20u%20Zenici!5e0!3m2!1sen!2sba!4v1715886119146!5m2!1sen!2sba"
                     width="500" height="250" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" ></iframe> 
             </div>

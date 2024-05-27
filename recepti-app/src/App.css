@@ -1,5 +1,12 @@
 .App {
   text-align: center;
+  /*dodanoo*/
+  display: flex;
+  flex-direction: column;
+}
+
+.content-wrap {
+  flex: 1;
 }
 
 .App-logo {

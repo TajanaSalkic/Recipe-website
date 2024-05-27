@@ -3,7 +3,6 @@
 @import "./animacije/animacije.css";
 @import "./fontovi/fontovi.css";
 
-
 .contact-us-wrapper {
     display: flex;
     flex-direction: column;
@@ -12,7 +11,6 @@
     animation: fadeIn 1.5s ease-in-out;
     margin-bottom: 0;
 }
-
 
 .contact-us-container {
     display: flex;
@@ -45,12 +43,11 @@
     width: 100%;
 }
 
-
-
 .contact-form form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .contact-form label {
@@ -61,6 +58,7 @@
     width: 100%;
 }
 
+
 .contact-form input,
 .contact-form textarea {
     width: 100%;
@@ -69,13 +67,17 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
+    box-sizing: border-box;
+    max-width: none; /* Remove max-width restrictions */
+    margin-left: -1px; /* Adjust these values to match the padding of the container */
+    margin-right: 1px;
 }
 
 .contact-form button {
     width: 50%;
     padding: 10px;
     border: none;
-    margin-top: 30px; /* Povećavamo razmak između dugmeta i linije */
+    margin-top: 30px;
     margin-bottom: 40px;
     border-radius: 5px;
     background-color: #ff4c8b;
@@ -93,22 +95,19 @@
 .contact-form button::after {
     content: '';
     position: absolute;
-    width: calc(100% + 150px); /* Povećavamo širinu linije za 40px kako bi bila duža od dugmeta */
+    width: calc(100% + 150px);
     height: 1px;
     background: linear-gradient(90deg, white, #f0f0f0);
     background-color: white;
-    bottom: -40px; /* Povećavamo udaljenost linije od dugmeta */
-    left: -75px;/* Dodajemo blagi pomak na desnu stranu */
-    border-radius: 100px; /* Dodajemo zaobljenje krajeva */
+    bottom: -40px;
+    left: -75px;
+    border-radius: 100px;
 }
 
-
-
-/* Icon Styles */
 .contact-icons {
     display: flex;
     justify-content: space-around;
-    align-items: center; /* Dodajemo ovaj red za vertikalno poravnanje */
+    align-items: center;
     width: 100%;
     margin-top: 30px;
 }
@@ -117,17 +116,16 @@
     color: white;
     font-size: 32px;
     text-decoration: none;
-    transition: color 0.3s ease, transform 1s ease-in-out; /* Dodajemo transition za transform */
+    transition: color 0.3s ease, transform 1s ease-in-out;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Poravnaj ikonu i tekst vertikalno */
+    align-items: center;
 }
 
 .contact-icons a:hover {
     color: #e43e7b;
-    animation: bounce 1s infinite; /* Dodajemo animaciju */
+    animation: bounce 1s infinite;
 }
-
 
 .contact-icons p {
     color: white;
@@ -135,32 +133,29 @@
     text-align: center;
 }
 
-
 @media only screen and (max-width : 768px) {
     .contact-us-container h1 {
-        font-size: 40px; /* Smanjite veličinu fonta za naslov na manjem ekranu */
-        margin-bottom: 10px; /* Smanjite razmak ispod naslova */
+        font-size: 40px;
+        margin-bottom: 10px;
     }
-    
+
     .contact-us-container p {
-        font-size: 16px; /* Smanjite veličinu fonta za paragrafe na manjem ekranu */
+        font-size: 16px;
     }
-    
+
     .contact-form button {
-        width: 100%; /* Promijenite širinu dugmeta na 100% na manjem ekranu */
-        margin-bottom: 20px; /* Uklonite marginu ispod dugmeta na manjem ekranu */
+        width: 100%;
+        margin-bottom: 20px;
     }
-    
+
     .contact-icons {
         display: flex;
-        flex-direction: column; /* Postavite ikonice i tekst jedan ispod drugog */
-        align-items: center; /* Centrirajte ikonice i tekst */
+        flex-direction: column;
+        align-items: center;
     }
-    
-    .contact-icons a {
-        margin-bottom: 10px; /* Podesite razmak između ikonice i teksta */
-        text-align: center; /* Centrirajte ikonice i tekst */
-    }
-    
-}
 
+    .contact-icons a {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+}
