@@ -19,6 +19,7 @@
     .logo{
         font-size: 1.5em;
         font-weight: bolder;
+        margin-left: 5px;
         color: var(--primary-color);
         text-shadow:0 1px 3px var(--shadow-color);
         span{
@@ -28,6 +29,7 @@
     .nav-links{
         a{
             margin-left: 1em;
+            margin-right: 5px;
             color: var(--text-light);
             letter-spacing: 2px;
             text-transform: uppercase;

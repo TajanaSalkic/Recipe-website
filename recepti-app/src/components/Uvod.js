@@ -34,6 +34,8 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import UvodSlika from "./UvodSlika.js";
 
+import '../stilovi/uvod.css';
+
 export default function Uvod() {
     const navigate = useNavigate();
     const images = [
@@ -59,7 +61,7 @@ export default function Uvod() {
                 <p className="info">
                     Naša stranica nudi širok izbor recepata za svaki ukus i priliku. Bez obzira jeste li početnik u kuhinji ili iskusni kuhar, ovdje ćete pronaći inspiraciju za svoje kulinarske avanture. Naša baza podataka sadrži stotine recepata, od jednostavnih jela do gurmanskih delicija, koje možete pripremiti za sebe, svoju obitelj i prijatelje.
                 </p>
-                <button className="btn" onClick={handleButtonClick}>Pronađi</button>
+                <button className="btni" onClick={handleButtonClick}>Pronađi</button>
             </div>
             <div className="col slike">
                 {images.map((src, index) => (

@@ -1,9 +1,10 @@
-.btn{
+/*
+.btni{
     
     border: none;
     outline: none;
     background-color: var(--primary-color);
-    color: white;
+    color: rgba(255,0,86,.85);
     padding: .75em 1em;
     font-family: 'PisanaSlova', 'PisanaSlova', Times, serif, 'PisanaSlova';
     font-size: 25px;
@@ -15,6 +16,42 @@
         box-shadow: 0 1px 3px var(--shadow-color);
     }
 }
+*/
+:root {
+    --primary-color: rgba(255,0,86, .85);
+    --secondary-color: rgba(250, 67, 128, 0.85);
+    --hover-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    --normal-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    --button-text-color: white;
+    --button-padding: 10px 20px;
+    --button-border-radius: 5px;
+    --button-font-size: 16px;
+  }
+  
+  .btni {
+    background-color: var(--primary-color);
+    color: var(--button-text-color);
+    padding: var(--button-padding);
+    border: none;
+    border-radius: var(--button-border-radius);
+    font-size: var(--button-font-size);
+    cursor: pointer;
+    box-shadow: var(--normal-shadow);
+    transition: all 0.3s ease;
+  }
+  
+  .btni:hover {
+    box-shadow: var(--hover-shadow);
+    transform: translateY(-2px);
+    background-color: var(--secondary-color);
+  }
+  
+  .btni:active {
+    transform: translateY(0);
+    box-shadow: var(--normal-shadow);
+    background-color: var(--primary-color);
+  }
+  
 
 @keyframes fadeIn {
     from {

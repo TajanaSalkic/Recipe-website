@@ -1,49 +1,9 @@
 @import "./animacije/animacije.css";
 @import "./fontovi/fontovi.css";
 
-.navbar-donji {
-    background-color: rgb(255,0,86);
-    overflow: hidden;
-    padding: 10px 20px;
-    width: 100%;
-    margin-top: 50px;
-    bottom: 0;
-    animation: slideIn2 .9s forwards;
-}
-
-.navbar-donji-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbar-donji-logo h1 {
-    color: white;
-    font-size: 50px;
-    margin-left: 20px;
-    font-family: 'PisanaSlova', 'PisanaSlova', Times, serif, 'PisanaSlova';
-}
-
-.navbar-donji-menu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    margin-left: 875px;
-}
-
-.navbar-donji-item {
-    margin: 0 10px;
-}
-
-.navbar-donji-link {
-    color: white;
-    text-decoration: none;
-    font-size: 24px;
-}
-
-.navbar-donji-followus {
-    color: white;
+.content-wrapper {
+    min-height: calc(100% - 100px);
+   
 }
 
 /* Media query za mobilne uređaje */

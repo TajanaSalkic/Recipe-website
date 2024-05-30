@@ -81,7 +81,6 @@
     transition: background-color 0.3s ease;
     position: relative;
 }
-
 .signup-form button:hover {
     background-color: #e43e7b;
 }
