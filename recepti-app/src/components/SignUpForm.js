@@ -14,14 +14,18 @@ const SignUpForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setError("");  // Clear any previous errors
+
     if (!validateEmail(email)) {
       setError("Invalid email");
       return;
     }
-    if (password.length < 6) {
-      setError("Password must be at least 6 characters long");
+
+    if (password.length < 8) {
+      setError("Password must be at least 8 characters long");
       return;
     }
+
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
@@ -33,7 +37,7 @@ const SignUpForm = () => {
       });
 
       console.log("User created and data saved to Firestore");
-      navigate('/');
+      navigate('/userpage');  // Redirect to the user page
     } catch (err) {
       console.error(err);
       setError(err.message);
@@ -49,11 +53,13 @@ const SignUpForm = () => {
     <div className="signup">
       <form className="signup-form" onSubmit={handleSubmit}>
         <h1>Sign Up</h1>
+        {error && <p style={{ color: 'red' }}>{error}</p>}  {/* Display errors */}
         <label htmlFor="email">
           Email:
           <input
             type="text"
             id="email"
+            value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
         </label>
@@ -62,6 +68,7 @@ const SignUpForm = () => {
           <input
             type="password"
             id="password"
+            value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
         </label>
@@ -73,7 +80,4 @@ const SignUpForm = () => {
   );
 };
 
-//{error && <p style={{ color: 'red' }}>{error}</p>}
-
 export default SignUpForm;
-
