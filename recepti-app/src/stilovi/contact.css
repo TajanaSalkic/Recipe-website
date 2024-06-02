@@ -110,6 +110,7 @@
     align-items: center;
     width: 100%;
     margin-top: 30px;
+    text-align: center;
 }
 
 .contact-icons a {
@@ -132,6 +133,9 @@
     font-size: 14px;
     text-align: center;
 }
+
+
+
 
 @media only screen and (max-width : 768px) {
     .contact-us-container h1 {

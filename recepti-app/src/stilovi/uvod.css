@@ -17,6 +17,9 @@
     }
 }
 */
+
+
+/*
 :root {
     --primary-color: rgba(255,0,86, .85);
     --secondary-color: rgba(250, 67, 128, 0.85);
@@ -159,6 +162,181 @@ img{
         width:100%;
         height: 100%;
     }
+}
+*/
+
+:root {
+    --primary-color: rgba(255,0,86, .85);
+    --secondary-color: rgba(250, 67, 128, 0.85);
+    --hover-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    --normal-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    --button-text-color: white;
+    --button-padding: 10px 20px;
+    --button-border-radius: 5px;
+    --button-font-size: 16px;
+}
+
+.btni {
+    background-color: var(--primary-color);
+    color: var(--button-text-color);
+    padding: var(--button-padding);
+    border: none;
+    border-radius: var(--button-border-radius);
+    font-size: var(--button-font-size);
+    cursor: pointer;
+    box-shadow: var(--normal-shadow);
+    transition: all 0.3s ease;
+}
+
+.btni:hover {
+    box-shadow: var(--hover-shadow);
+    transform: translateY(-2px);
+    background-color: var(--secondary-color);
+}
+
+.btni:active {
+    transform: translateY(0);
+    box-shadow: var(--normal-shadow);
+    background-color: var(--primary-color);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.section .col {
+    width: 50%;
+}
+
+.naslov {
+    animation: fadeIn 1.5s ease-in-out;
+    color: var(--text-color);
+    font-size: 60px;
+    margin-bottom: 0.3em;
+    text-align: center;
+    font-family: 'PisanaSlova', 'PisanaSlova', Times, serif, 'PisanaSlova';
+    color: rgb(255,0,86);
+}
+
+.info {
+    animation: fadeIn 1.5s ease-in-out;
+    color: var(--text-light);
+    font-size: 1em;
+    letter-spacing: 1px;
+    line-height: 1.3;
+    margin-bottom: 1.25em;
+    margin-right: 1em;
+    text-align: center;
+}
+
+@font-face {
+    font-family: 'PisanaSlova';
+    src: url('/public/fonts/Simple-Farmhouse.ttf') format('truetype');
+}
+
+.section.uvod {
+    text-align: center;
+}
+
+.tekst {
+    padding-right: 1em;
+}
+
+.slike {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75vw;
+}
+
+.uvod-slike {
+    transform: scale(0);
+    opacity: 0;
+    animation: 0.5s popOut forwards;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.uvod-slike:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.uvod-slike:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.uvod-slike:nth-child(6) {
+    animation-delay: 0.3s;
+}
+
+.uvod-slike:nth-child(9) {
+    animation-delay: 0.4s;
+}
+
+.uvod-slike:nth-child(8) {
+    animation-delay: 0.5s;
+}
+
+.uvod-slike:nth-child(7) {
+    animation-delay: 0.6s;
+}
+
+.uvod-slike:nth-child(4) {
+    animation-delay: 0.7s;
+}
+
+.uvod-slike:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+img {
+    object-fit: cover;
+}
+
+.uvod-slike {
+    background-color: red;
+    height: 0;
+    width: 100%;
+    position: relative;
+}
+
+.uvod-slike img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Media query for screens less than 800px */
+@media (max-width: 800px) {
+    .section {
+        flex-direction: column;
+    }
+
+    .section .col {
+        width: 100%;
+        padding: 0;
+    }
+
+    .tekst {
+        padding-right: 0;
+        margin-bottom: 20px; /* Add some space between the text and images */
+    }
+
+
 }
 
 

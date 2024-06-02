@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from "react";
-import '../stilovi/recepti.css';
+import '../../stilovi/recepti.css';
 import KarticaJeloUser from "./KarticaJeloUser.js";
 
 export default function Jelo() {

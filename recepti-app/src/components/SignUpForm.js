@@ -37,7 +37,7 @@ const SignUpForm = () => {
       });
 
       console.log("User created and data saved to Firestore");
-      navigate('/userpage');  // Redirect to the user page
+      navigate(`/${email}/`);  // Redirect to the user page
     } catch (err) {
       console.error(err);
       setError(err.message);

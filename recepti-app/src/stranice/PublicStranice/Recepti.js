@@ -1,5 +1,5 @@
-import Jelo from "../components/Jelo"
-import Navbar from "../components/Navbar"
+import Jelo from "../../components/Jelo"
+import Navbar from "../../components/Navbar"
 
 export default function Recepti(){
     return(

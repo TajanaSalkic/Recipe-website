@@ -1,9 +1,7 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import UvodSlika from "./UvodSlika.js";
+import UvodSlika from "../UvodSlika.js";
 
 export default function Uvod() {
-    const navigate = useNavigate();
     const images = [
         "/img/Burger.jpg",
         "/img/lunch.jpg",
@@ -12,13 +10,11 @@ export default function Uvod() {
         "/img/tacos.png",
         "/img/cake.png",
         "/img/macarons.jpeg",
-        "img/oatmeal.avif",
+        "/img/oatmeal.avif",
         "/img/pancakes.webp"
     ];
 
-    const handleButtonClick = () => {
-        navigate("/recepti");
-    };
+
 
     return (
         <div className="section uvod">

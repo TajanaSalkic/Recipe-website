@@ -1,8 +1,8 @@
 
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import "../stilovi/recept.css"
-import Navbar from "../components/Navbar"
+import "../../stilovi/recept.css"
+import Navbar from "../../components/Navbar"
 
 
 export default function Recept(){

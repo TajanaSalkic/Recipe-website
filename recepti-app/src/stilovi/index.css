@@ -82,16 +82,7 @@ a{
 }
 
 @media screen and (max-width: 768px){
-    .navbar{
-        
-        .nav-links{
-            display: none;
-        }
-
-        .sidebar-btn{
-            display: block;
-        }
-    }
+    
 
    
     .cointainer{
@@ -134,10 +125,6 @@ a{
         height: 250px !important;
     }
 
-    /*.col2{
-        width: 100% !important;
-    }*/
-
     .columns {
         flex-direction: column !important;
     }
@@ -151,12 +138,12 @@ a{
     }
 
     .column1 {
-        width: 100% !important; /* Each column takes up the full width */
+        width: 100% !important; 
         
     }
 
     .column2 {
-        width: 100% !important; /* Each column takes up the full width */
+        width: 100% !important; 
         padding-top: 0 !important;
     }
     

@@ -1,11 +1,11 @@
 
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import "../stilovi/recept.css";
-import NavbarUser from "../components/NavbarUser";
+import "../../stilovi/recept.css";
+import NavbarUser from "../../components/UserComponents/NavbarUser";
 
 export default function ReceptUser() {
-    const { id, email } = useParams(); 
+    const { id, email } = useParams()
     const [recipe, setRecipe] = useState(null);
     const [crossedIngredients, setCrossedIngredients] = useState([]);
 

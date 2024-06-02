@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/TajanaSalkic/Recipe-website/issues"
   },
-  "homepage": "https://github.com/TajanaSalkic/Recipe-website#readme"
+  "homepage": "https://github.com/TajanaSalkic/Recipe-website#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.2"
+  }
 }

@@ -8,6 +8,7 @@
 }
 
 .navbar{
+    border-radius: 10px;
     height: 55px;
     box-shadow: 0 3px 6px var(--shadow-color);
     background-color: var(--background-color);
@@ -27,9 +28,12 @@
         }
     }
     .nav-links{
+        margin-right: 10px;
+        display: flex; /* Use flexbox */
+        align-items: center; /* Vertically center items */
         a{
-            margin-left: 1em;
-            margin-right: 5px;
+            margin-left: 8px;
+            margin-right: 2px;
             color: var(--text-light);
             letter-spacing: 2px;
             text-transform: uppercase;
@@ -59,6 +63,7 @@
     }
 
     .sidebar-btn{
+        margin-right: 10px;
         height: 28px;
         width: 30px;
         position:relative;
@@ -139,20 +144,20 @@ ucitavaju jedan po jedan a ne svi odjednom*/
     }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 910px){
     .navbar{
         
         .nav-links{
-            display: none;
+            display: none !important;
         }
 
-        .sidebar-btn{
-            display: block;
-        }
     }
+    .sidebar-btn{
+        display: block !important;
+    }
+}
+
 
     
     
-    
-}
 

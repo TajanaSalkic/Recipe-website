@@ -21,6 +21,8 @@
         display: flex;
         flex-wrap: wrap;
         text-align: center;
+        justify-content: center; 
+        align-items: center; 
     }
     .col1.slike{
         padding-top: 35px;

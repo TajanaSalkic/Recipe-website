@@ -1,14 +1,12 @@
 import { useState } from "react"
 import { Link, useLocation , useNavigate} from "react-router-dom"
-import SidebarUserAdmin from "./SidebarUserAdmin"
-import { useParams } from 'react-router-dom';
+import SidebarUserAdmin from "../SidebarUserAdmin"
 
-import { faHome, faList, faSignOut} from "@fortawesome/free-solid-svg-icons"
+import { faHome, faList} from "@fortawesome/free-solid-svg-icons"
 import { signOut} from 'firebase/auth';
-import { auth } from "../stranice/firebase-config";
+import { auth } from "../../stranice/firebase-config";
 export default function NavbarAdmin(){
     const [showSidebar, setShowSidebar] = useState(false);
-    const { email } = useParams();
     const navigate = useNavigate();
 
     const links=[{

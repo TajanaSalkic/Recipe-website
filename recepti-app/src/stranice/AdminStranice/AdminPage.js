@@ -1,6 +1,6 @@
 import React from 'react';
-import NavbarAdmin from '../components/NavbarAdmin';
-import { useLocation } from 'react-router-dom';
+import NavbarAdmin from '../../components/AdminComponents/NavbarAdmin';
+
 
 function AdminPage() {
    

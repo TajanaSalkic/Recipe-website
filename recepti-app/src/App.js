@@ -4,25 +4,24 @@ import {
   Routes,
   Route
 } from "react-router-dom"
-import Navbar from "./components/Navbar"
-import Pocetna from './stranice/Pocetna';
-import Onama from './stranice/Onama';
-import Recepti from './stranice/Recepti';
-import ReceptiUser from './stranice/ReceptiUser';
-import Recept from './stranice/Recept';
-import ContactUs from './stranice/Kontakt';
+import Pocetna from './stranice/PublicStranice/Pocetna';
+import Onama from './stranice/PublicStranice/Onama';
+import Recepti from './stranice/PublicStranice/Recepti';
+import ReceptiUser from './stranice/UserStranice/ReceptiUser';
+import Recept from './stranice/PublicStranice/Recept';
+import ContactUs from './stranice/PublicStranice/Kontakt';
 import Footer from './components/Footer';
-import Prijava from './stranice/Prijava';
+import Prijava from './stranice/PublicStranice/Prijava';
 import Login from './components/Login';
-import AdminPage from './stranice/AdminPage'
-import UserPage from './stranice/UserPage'
-import PocetnaAdmin from './stranice/PocetnaAdmin'
-import PocetnaUser from './stranice/PocetnaUser'
-import Admin from './stranice/Admin'
-import OnamaUser from './stranice/OnamaUser'
-import ContactUsUser from './stranice/KontaktUser';
-import ReceptUser from './stranice/ReceptUser';
-import Omiljeni from './stranice/Omiljeni';
+import AdminPage from './stranice/AdminStranice/AdminPage'
+import UserPage from './stranice/UserStranice/UserPage'
+import PocetnaAdmin from './stranice/AdminStranice/PocetnaAdmin'
+import PocetnaUser from './stranice/UserStranice/PocetnaUser'
+import Admin from './stranice/AdminStranice/Korisnici'
+import OnamaUser from './stranice/UserStranice/OnamaUser'
+import ContactUsUser from './stranice/UserStranice/KontaktUser';
+import ReceptUser from './stranice/UserStranice/ReceptUser';
+import Omiljeni from './stranice/UserStranice/Omiljeni';
 
 function App() {
   return (

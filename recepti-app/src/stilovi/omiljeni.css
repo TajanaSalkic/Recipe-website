@@ -1,0 +1,70 @@
+h1{
+    font-family: 'PisanaSlova', 'PisanaSlova', Times, serif, 'PisanaSlova';
+    animation: .9s popOut forwards;
+    font-size: 70px;
+    text-align: center;
+}
+
+
+.card {
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden; /* Hide any content that exceeds the height */
+    height: auto; /* Set a fixed height for the card */
+    display: flex;
+    flex-direction: column; /* Align children vertically */
+    justify-self: center; /* Center the card horizontally within the grid cell */
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center; /* Center the grid horizontally */
+    align-items: center; /* Center the grid vertically */
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+
+.card img {
+    width: 100%;
+    height: auto; /* Set a fixed height for the image */
+    object-fit: cover;
+}
+
+.card .info {
+    padding: 10px;
+    text-align: center;
+}
+
+.dugme {
+    margin-top: auto; /* Align the button to the bottom of the card */
+    width: 100%; /* Full width button */
+    padding: 5px 0; /* Add padding to the button */
+    background-color: #ff4c8b;
+    color: white;
+    border: none;
+    border-radius: 0; /* Remove border radius */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dugme:hover {
+    background-color: #e43e7b;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .recipe-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px));
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .recipe-grid {
+        grid-template-columns: 1fr;
+    }
+}

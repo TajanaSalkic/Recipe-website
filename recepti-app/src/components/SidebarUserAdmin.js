@@ -1,13 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Link, useLocation, useNavigate } from "react-router-dom"
-import { useParams } from 'react-router-dom';
 import {faSignOut} from "@fortawesome/free-solid-svg-icons"
 import { signOut} from 'firebase/auth';
 import { auth } from "../stranice/firebase-config";
 
 export default function SidebarUserAdmin({ links, close }) {
     const location = useLocation()
-    const { email } = useParams();
     const navigate = useNavigate();
     const handleSignOut = async () => {
         try {

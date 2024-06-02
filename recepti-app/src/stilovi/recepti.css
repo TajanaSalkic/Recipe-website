@@ -23,6 +23,8 @@
     text-align: center;
     margin:3rem;
     animation: slideIn2 .9s forwards;
+    display: flex; 
+    justify-content: center; 
 }
 
 
@@ -49,8 +51,9 @@
     width:80%;
     margin:0 auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: center; 
     flex-wrap: wrap;
+    gap: 20px; 
 
 }
 .card{

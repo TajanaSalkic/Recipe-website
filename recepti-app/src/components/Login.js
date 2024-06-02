@@ -7,7 +7,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import {auth} from '../stranice/firebase-config'
 import { signInWithEmailAndPassword, signOut} from 'firebase/auth';
-import app from '../stranice/firebase-config';
+
 import Navbar from './Navbar';
 const Login = () => {
     const [email, setEmail] = useState("");
@@ -41,8 +41,7 @@ const Login = () => {
 
             await signInWithEmailAndPassword(auth, email, password);
             console.log("Logged in");
-            const encodedEmail = encodeURIComponent(email);
-            navigate(`/${encodedEmail}/`);
+            navigate(`/${email}/`);
         } catch (err) {
             console.error(err);
             setError(err.message);
@@ -79,7 +78,6 @@ const Login = () => {
                     <button type="submit">Login</button><br />
                     <br />
                     <p>Don't have an account? <button className='btn-sgn'><Link to="/prijava">Sign up</Link></button></p>
-                    <button onClick={logout}>Sign Out</button>
                 </form>
             </div>
         </div>

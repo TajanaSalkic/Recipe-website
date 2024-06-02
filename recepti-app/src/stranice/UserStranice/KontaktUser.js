@@ -1,108 +1,7 @@
-/*import React, { useState } from 'react';*/
-import '../stilovi/contact.css';
-/*import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';*/
-import NavbarUser from '../components/NavbarUser';
 
-/*
-function ContactUs() {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        message: ''
-    });
-
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({
-            ...formData,
-            [name]: value
-        });
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log('Form Data Submitted:', formData);
-
-       //ovdje se pomocu POST, itd.. moze slati na server
-
-        setFormData({
-            name: '',
-            email: '',
-            message: ''
-        });
-    };
-
-    return (
-        <div className="contact-us-wrapper">
-            <div className="contact-us-container">
-                <h1>Kontakt</h1>
-                <p>Vaše mišljenje je važno za nas, stoga ne ustručavajte se kontaktirati nas radi bilo kakvih pitanja ili povratnih informacija.</p>
-                <div className="contact-form">
-                    <form onSubmit={handleSubmit}>
-                        <label htmlFor="name">Ime i prezime</label>
-                        <input 
-                            type="text" 
-                            id="name" 
-                            name="name" 
-                            value={formData.name} 
-                            onChange={handleChange} 
-                            required 
-                        />
-
-                        <label htmlFor="email">E-mail</label>
-                        <input 
-                            type="email" 
-                            id="email" 
-                            name="email" 
-                            value={formData.email} 
-                            onChange={handleChange} 
-                            required 
-                        />
-
-                        <label htmlFor="message">Komentar</label>
-                        <textarea 
-                            id="message" 
-                            name="message" 
-                            rows="4" 
-                            value={formData.message} 
-                            onChange={handleChange} 
-                            required 
-                        ></textarea>
-
-                        <button type="submit">Potvrdi</button>
-                    </form>
-                </div>
-                <div className="contact-icons">
-                <a href="tel:+123456789">{/*<FaPhone />}</a>
-                <div>
-                <p>032-514-367</p>
-                <p>033-875-222</p>
-                <p>032-414-363</p>
-                </div>
-                <a href="mailto:info@example.com">{/*<FaEnvelope />}</a>
-                <div>
-                <p>info@example.com</p>
-                <p>info@example.com</p>
-                <p>info@example.com</p> 
-                </div>
-                <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer">{/*<FaMapMarkerAlt />}</a>
-                    <div> {/* Dodajemo div za pravilno poravnanje }
-                         <p>Fakultetska 1</p> {/* Prva adresa }
-                         <p>Aska Borića bb</p> {/* Druga adresa }
-                    </div>
-                </div>
-
-            </div>
-
-            
-        </div>
-    );
-}
-
-export default ContactUs;
-*/
-
-import { useState, useEffect } from "react";
+import '../../stilovi/contact.css';
+import NavbarUser from '../../components/UserComponents/NavbarUser';
+import { useState} from "react";
 import { useForm } from "react-hook-form";
 import useWeb3Forms from "@web3forms/react";
 
@@ -111,9 +10,6 @@ export default function ContactUsUser() {
     register,
     handleSubmit,
     reset,
-    watch,
-    control,
-    setValue,
     formState: { errors, isSubmitSuccessful, isSubmitting },
   } = useForm({
     mode: "onTouched",
@@ -242,23 +138,18 @@ export default function ContactUsUser() {
                         )   
                     }
                 <div className="contact-icons">
-                <a href="tel:+123456789">{/*<FaPhone />*/}</a>
-                <div>
-                <p>032-514-367</p>
-                <p>033-875-222</p>
-                <p>032-414-363</p>
-                </div>
-                <a href="mailto:info@example.com">{/*<FaEnvelope />*/}</a>
-                <div>
-                <p>info@example.com</p>
-                <p>info@example.com</p>
-                <p>info@example.com</p> 
-                </div>
-                <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer">{/*<FaMapMarkerAlt />*/}</a>
-                    <div> {/* Dodajemo div za pravilno poravnanje */}
-                         <p>Fakultetska 1</p> {/* Prva adresa */}
-                         <p>Aska Borića bb</p> {/* Druga adresa */}
-                    </div>
+                <div className="google-maps-container">
+                        <iframe
+                            className="google-maps-iframe"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2860.402780810643!2d17.9010335760328!3d44.19877017108148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475ee2423f1ab2d3%3A0x6740c6af1734d8b0!2sMa%C5%A1inski%20fakultet%20u%20Zenici!5e0!3m2!1sen!2sba!4v1715886119146!5m2!1sen!2sba"
+                            width="500"
+                            height="250"
+                            style={{ border: 0 }}
+                            allowFullScreen=""
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                        ></iframe>
+</div>
                 </div>
             </div>
         </div>
