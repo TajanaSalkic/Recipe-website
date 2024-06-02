@@ -18,17 +18,7 @@ const firebaseConfig = {
   appId: "1:734080100337:web:f80257c6ea1fa8894f8650",
   measurementId: "G-56DL638E9L"
 };
-//sara10
-/*
-const firebaseConfig = {
-  apiKey: "AIzaSyBJD49h3II-xKkf1JekekEsYJ5U62aLHhg",
-  authDomain: "wdpriv-fa79a.firebaseapp.com",
-  projectId: "wdpriv-fa79a",
-  storageBucket: "wdpriv-fa79a.appspot.com",
-  messagingSenderId: "999762016301",
-  appId: "1:999762016301:web:09e7d6022a5150435f20a4",
-  measurementId: "G-WTDSB718LG"
-};*/
+
 /*
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
