@@ -85,7 +85,21 @@ export default function ContactUs() {
                                           )
                                       }
                           </div>
-    
+                                        
+                          <div className="Drzava">
+                            <label htmlFor="country">Country</label>
+                                <select id="country" name="country" {...register("country", { required: "Please select your country" })}>
+                                    <option value="Australia">Australia</option>
+                                    <option value="Canada">Canada</option>
+                                    <option value="USA">USA</option>
+                                </select>
+                                {errors.country && (
+                                <div>
+                                    <small>{errors.country.message}</small>
+                                </div>
+                                )}
+                        </div>
+
                           <div className="UnosArea">
                               <textarea name="message" placeholder="Your Message"
                               {...register("message", {
@@ -100,7 +114,7 @@ export default function ContactUs() {
                                   )
                               }
                           </div>
-    
+            
                           <button type="submit">
                               {isSubmitting ? (
                               <svg xmlns="http://www.w3.org/2000/svg"

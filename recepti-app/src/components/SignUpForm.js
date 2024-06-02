@@ -74,6 +74,7 @@ const SignUpForm = () => {
         </label>
         <button type="submit">Registracija</button> 
         <br />
+        <p>Imate račun? <button className='btn-sgn'><Link to="/login">Prijava</Link></button></p> {/* Link za prijavu */}
       </form>
     </div>
   );
