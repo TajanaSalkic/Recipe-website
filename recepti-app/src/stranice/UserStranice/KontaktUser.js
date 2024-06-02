@@ -1,11 +1,11 @@
 
 import '../../stilovi/contact.css';
-import NavbarUser from '../../components/UserComponents/NavbarUser';
+import Navbar from '../../components/Navbar';
 import { useState} from "react";
 import { useForm } from "react-hook-form";
 import useWeb3Forms from "@web3forms/react";
 
-export default function ContactUsUser() {
+export default function ContactUs() {
   const {
     register,
     handleSubmit,
@@ -23,7 +23,7 @@ export default function ContactUsUser() {
   const { submit: onSubmit } = useWeb3Forms({
     access_key: apiKey,
     settings: {
-      from_name: "Acme Inc",
+      from_name: "Recipe App Contact Form",
       subject: "New Contact Message from your Website",
     },
     onSuccess: (msg, data) => {
@@ -38,14 +38,14 @@ export default function ContactUsUser() {
   });
 
   return (
-      <><NavbarUser/>
+      <><Navbar/>
         <div className="contact-us-wrapper">
             <div className="contact-us-container">
                 <h1>Kontakt</h1>
                 <p>Vaše mišljenje je važno za nas, stoga ne ustručavajte se kontaktirati nas radi bilo kakvih pitanja ili povratnih informacija.</p>
                 <div className="contact-form">
                     <form onSubmit={handleSubmit(onSubmit)}>
-                        <div>
+                        <div className="UnosArea">
                             <input type="text" placeholder="Full Name"
                             autoComplete="false"
                             {...register("name", {
@@ -61,7 +61,7 @@ export default function ContactUsUser() {
                             )}
                         </div>
   
-                        <div>
+                        <div className="UnosAreaE">
                             <label htmlFor="email_address">
                             
                                 <input id="email_address" type="email"
@@ -86,7 +86,7 @@ export default function ContactUsUser() {
                                     }
                         </div>
   
-                        <div>
+                        <div className="UnosArea">
                             <textarea name="message" placeholder="Your Message"
                             {...register("message", {
                             required: "Please enter a message",

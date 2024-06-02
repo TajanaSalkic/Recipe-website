@@ -153,10 +153,6 @@
         margin-right: 85%;
         text-align: justify;
         text-align: center;
-        
-    }
-    .naslov-kosmomi h1{
-        
     }
     .iframe-container {
         flex-direction: column; /* Stack items vertically */
