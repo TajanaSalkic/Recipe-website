@@ -77,6 +77,7 @@ const Login = () => {
                     </label>
                     <button type="submit">Login</button><br />
                     <br />
+                    {error && <p style={{ color: 'red' }}>{error}</p>} 
                     <p>Don't have an account? <button className='btn-sgn'><Link to="/prijava">Sign up</Link></button></p>
                 </form>
             </div>

@@ -39,7 +39,7 @@ const handleSignOut = async () => {
         <>
         <div className="navbar container">
             {/* dodati i logo neki mozda */}
-            <a href="#!" className="logo">IME</a>
+            <a href="#!" className="logo">Foodscape</a>
             <div className="nav-links">
                 {links.map(link => (
                     <Link to={link.path} className={ location.pathname === link.path ? "active" : ""} key={link.name}>{link.name}</Link>

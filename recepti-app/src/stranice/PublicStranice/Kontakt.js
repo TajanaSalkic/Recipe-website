@@ -23,7 +23,7 @@ export default function ContactUs() {
   const { submit: onSubmit } = useWeb3Forms({
     access_key: apiKey,
     settings: {
-      from_name: "Acme Inc",
+      from_name: "Recipe App Contact Form",
       subject: "New Contact Message from your Website",
     },
     onSuccess: (msg, data) => {
@@ -61,7 +61,7 @@ export default function ContactUs() {
                             )}
                         </div>
   
-                        <div className="UnosArea">
+                        <div className="UnosAreaE">
                             <label htmlFor="email_address">
                             
                                 <input id="email_address" type="email"

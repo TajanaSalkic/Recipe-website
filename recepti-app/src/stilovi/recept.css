@@ -41,7 +41,7 @@
 
     .col2.sastojci{
         display: flex;
-    flex-wrap: wrap;
+        flex-wrap: wrap;
     }
 
     .col3.sastojci{
@@ -96,7 +96,7 @@
         font-family: 'PisanaSlova', 'PisanaSlova', Times, serif, 'PisanaSlova';
         .porijeklo{
             padding-top: 20px;
-            font-size: 30px;
+            font-size: 50px;
             color: rgb(255,0,86);
         }
     }

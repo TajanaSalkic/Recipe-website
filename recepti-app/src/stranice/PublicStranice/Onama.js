@@ -41,25 +41,25 @@ export default function Onama() {
             <div className="images-with-text-container">
 
                 <div className="naslov-kosmomi">
-                        <h1>Tko smo mi?</h1>
+                        <h1>Ko smo mi?</h1>
                 </div>
                 <div className="image-text-item">
-                    <img src="/img/ana.jpg" alt="Slika 1" />
+                    <img src="/img/ana.jpg" alt="Slika 1" /><br></br>
                     <p>Emily, stručnjakinja za slatkiše, pravi je virtuoz u svijetu deserata. Njena strast prema eksperimentiranju s novim okusima i teksturama čini njene slastice jedinstvenim remek-djelima. Emily neprestano traži inspiraciju u tradicionalnim receptima koje pretvara u inovativne poslastice, često koristeći neobične sastojke i tehnike.
                          Svaka njena kreacija priča je za sebe, kombinirajući umjetnost i kulinarstvo u savršenoj harmoniji.</p>
                 </div>
                 <div className="image-text-item">
-                    <img src="/img/mark.jpg" alt="Slika 2" />
+                    <img src="/img/mark.jpg" alt="Slika 2" /><br></br>
                     <p>Mark je majstor roštilja čije su mesne delicije pravi hit među ljubiteljima sočnih zalogaja. Njegova strast prema roštiljanju očituje se u svakom savršeno pečenom komadu mesa, od rebaraca do kobasica. Markov talent leži u njegovoj sposobnosti da svaki komad mesa dovede do savršenstva, koristeći pritom raznovrsne marinade i začine.
                          Njegov pristup mesu nije samo kulinarski, već i gotovo ritualan, s posebnim naglaskom na kvalitetu i autentičnost.</p>
                 </div>
                 <div className="image-text-item">
-                    <img src="/img/sarah.jpg" alt="Slika 3" />
+                    <img src="/img/sarah.jpg" alt="Slika 3" /><br></br>
                     <p>Sarah je kreativna kuharica koja neprestano istražuje svjetske kuhinje, unoseći dašak egzotike u svako jelo koje pripremi. Njena radoznalost i otvorenost prema novim okusima čine je pravom inovatoricom u kuhinji. Od azijskih specijaliteta do mediteranskih delicija, Sarah uspijeva spojiti različite kulture na tanjuru, stvarajući autentična i uzbudljiva jela koja osvajaju nepca. 
                         Njena jela su pravi gastronomski putokazi kroz različite dijelove svijeta.</p>
                 </div>
                 <div className="image-text-item">
-                    <img src="/img/emily.jpg" alt="Slika 4" />
+                    <img src="/img/emily.jpg" alt="Slika 4" /><br></br>
                     <p>Ana je stručnjakinja za pripremu egzotičnih jela i začinjene delicije, čija kuhinja odiše aromama dalekih zemalja. Njena strast prema intenzivnim okusima i začinima stvara eksploziju okusa u svakom jelu. Ana neprestano istražuje nove kulinarske horizonte, kombinirajući autentične recepte s vlastitim kreativnim dodirom. 
                         Njena jela su pravi festival za čula, donoseći toplinu i uzbuđenje egzotičnih kuhinja direktno na stol.</p>
                 </div>

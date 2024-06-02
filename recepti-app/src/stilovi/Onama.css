@@ -59,8 +59,10 @@
 .image-text-item {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
-    margin-top: 30px;
+    justify-content: space-between;
+    padding: 20px;
+    position: relative;
+    border-radius: 10px;
 }
 
 .naslov-kosmomi {
@@ -108,8 +110,11 @@
 }
 
 
-.google-maps-iframe{
-    margin-right: 170px;
+.google-maps-iframe {
+    width: 100%;
+    height: 250px;
+    border-radius: 5px;
+    margin-top: 10px;
 }
 
 .about-us-wrapper {
@@ -119,30 +124,80 @@
     text-align: justify;
     
 }
-@media screen and (max-width: 480px){
-    .about-us-container {
-        flex-direction: column;
-    }
 
-    .text-container {
-        order: 2;
-        margin-top: 20px;
+
+@media only screen and (max-width: 768px){
+    .navbar{
+        
+        .nav-links{
+            display: none;
+        }
+
+        .sidebar-btn{
+            display: block;
+        }
+    }
+    .images-with-text-container{
+        .image-text-item{
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            text-align: justify;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    }
+    .naslov-kosmomi {
+        align-items: center;
+        margin-right: 85%;
+        text-align: justify;
+        text-align: center;
+        
+    }
+    .naslov-kosmomi h1{
+        
+    }
+    .iframe-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        padding: 10px; /* Adjust padding as needed */
+        margin: 20px 0; /* Add margin for spacing */
+      }
+    
+    .iframe-container h1 {
+        margin: 0; /* Reset margin */
+        font-size: 24px; /* Adjust font size */
+        text-align: center; /* Center align heading */
     }
     
-}
-
-@media screen and (max-width: 768px){
-    .about-us-container {
-        flex-direction: column;
-        padding: 10px;
+    .google-maps-iframe {
+        width: 100%; /* Make iframe full width */
+        height: 200px; /* Set desired height */
+        margin-top: 10px; /* Add margin for spacing */
+        border-radius: 5px; /* Add border radius */
+        ;
     }
 
-    .text-container {
-        order: 2;
-        margin-top: 20px;
+    .naslov-kakodonas{
+        align-items: center;
+        text-align: justify;
+        text-align: center;
+        display: inline;
+    }
+    .naslov-kakodonas h1{
+        font-size: 50px;
+    }
+    .cointainer{
+        padding-inline: 6vw;
     }
 
-
-
-    
+    .section{
+        .col{
+            width: 100%;
+            padding: 0 !important;
+            text-align: center;
+            margin-bottom: 2em;
+        }
+    }   
 }
