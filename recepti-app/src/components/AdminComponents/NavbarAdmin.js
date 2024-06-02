@@ -1,14 +1,15 @@
 import { useState } from "react"
 import { Link, useLocation , useNavigate} from "react-router-dom"
 import SidebarUserAdmin from "../SidebarUserAdmin"
-
-import { faHome, faList} from "@fortawesome/free-solid-svg-icons"
+import { faHome, faContactBook} from "@fortawesome/free-solid-svg-icons"
 import { signOut} from 'firebase/auth';
 import { auth } from "../../stranice/firebase-config";
-export default function NavbarAdmin(){
-    const [showSidebar, setShowSidebar] = useState(false);
-    const navigate = useNavigate();
 
+export default function NavbarAdmin(){
+    const [showSidebar, setShowSidebar] = useState(false); // stanje za prikazivanje sidebara, default je false
+    const navigate = useNavigate(); // navigiranje po stranicama
+
+    //linkovi za navbar, odnosno rutanje
     const links=[{
             name: "Početna",
             path: "/admin",
@@ -17,9 +18,11 @@ export default function NavbarAdmin(){
     {
         name:"Korisnici",
         path:"/admin/korisnici",
-        icon:faList
+        icon:faContactBook
     }
 ]
+
+// funkcija za odjavljivanje korisnika koja automatski vraća korisnika na public pocetnu stranicu
 
 const handleSignOut = async () => {
     try {
@@ -30,6 +33,7 @@ const handleSignOut = async () => {
     }
 };
 
+// funckija za zatvaranjae sidebara
     function closeSidebar(){
         setShowSidebar(false)
     }
@@ -38,9 +42,9 @@ const handleSignOut = async () => {
     return (
         <>
         <div className="navbar container">
-            {/* dodati i logo neki mozda */}
-            <a href="#!" className="logo">Foodscape</a>
+            <a href="/admin" className="logo">Foodscape</a>
             <div className="nav-links">
+                {/*mapiranje linkova i css active class name kada je stranica aktivna da je osvijetli*/}
                 {links.map(link => (
                     <Link to={link.path} className={ location.pathname === link.path ? "active" : ""} key={link.name}>{link.name}</Link>
                 ))}
@@ -49,12 +53,14 @@ const handleSignOut = async () => {
                     </a>
             </div>
             <div onClick={() => setShowSidebar(true)} className={showSidebar ? "sidebar-btn active" : "sidebar-btn"}>
+                    {/* za prikaz linija koje predstavljaju ikonu za sidebar */}
                     <div className="bar"></div>
                     <div className="bar"></div>
                     <div className="bar"></div>
 
             </div>
         </div>
+        {/* za prikazivanje bočne trake ako je showSidebar true */}
         {showSidebar && <SidebarUserAdmin close = {closeSidebar} links={links}/>}
         
         </>

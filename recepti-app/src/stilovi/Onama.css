@@ -17,6 +17,7 @@
     flex: 2;
     color: black;
     font-size: large;
+
 }
 
 .image-container {
@@ -125,8 +126,21 @@
     
 }
 
+@media  only screen and (max-width: 900px){
+    .about-us-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .text-container {
+        order: 2;
+        margin-top: 20px;
+    }
+}
+
 
 @media only screen and (max-width: 768px){
+    
     .navbar{
         
         .nav-links{

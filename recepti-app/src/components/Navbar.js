@@ -2,6 +2,7 @@ import { useState } from "react"
 import { Link, useLocation } from "react-router-dom"
 import Sidebar from "./Sidebar"
 
+
 import {faContactBook, faHome, faInfoCircle, faList, faSignIn} from "@fortawesome/free-solid-svg-icons"
 export default function Navbar(){
     const [showSidebar, setShowSidebar] = useState(false)
@@ -15,13 +16,9 @@ export default function Navbar(){
         path:"/recepti",
         icon:faList
     },
+    
     {
         name:"Prijava",
-        path:"/prijava",
-        icon: faSignIn
-    },
-    {
-        name:"Login",
         path:"/login",
         icon: faSignIn
     },
@@ -44,8 +41,7 @@ export default function Navbar(){
     return (
         <>
         <div className="navbar container">
-            {/* dodati i logo neki mozda */}
-            <a href="#!" className="logo">Foodscape</a>
+            <a href="/" className="logo">Foodscape</a>
             <div className="nav-links">
                 {links.map(link => (
                     <Link to={link.path} className={ location.pathname === link.path ? "active" : ""} key={link.name}>{link.name}</Link>

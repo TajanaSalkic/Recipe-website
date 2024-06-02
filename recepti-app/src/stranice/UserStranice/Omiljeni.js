@@ -1,70 +1,22 @@
-
-/*
-import { Link } from "react-router-dom";
-import React, { useEffect, useState } from 'react';
-import NavbarUser from '../../components/UserComponents/NavbarUser';
-import { useParams } from 'react-router-dom';
-import '../../stilovi/omiljeni.css';
-
-const Omiljeni = () => {
-    const [favoriteRecipes, setFavoriteRecipes] = useState([]);
-    const { email } = useParams(); 
-
-    useEffect(() => {
-        const favorites = JSON.parse(localStorage.getItem(`favorites_${email}`)) || [];
-        setFavoriteRecipes(favorites);
-    }, [email]);
-
-    const removeFromFavorites = (idMeal) => {
-        const updatedFavorites = favoriteRecipes.filter(recipe => recipe.idMeal !== idMeal);
-        setFavoriteRecipes(updatedFavorites);
-        localStorage.setItem(`favorites_${email}`, JSON.stringify(updatedFavorites));
-    };
-
-    return (
-        <div>
-            <NavbarUser/>
-            <h1>Omiljeni recepti</h1>
-            <div className="recipe-grid"> */
-                /*{favoriteRecipes.map((recipe) => (
-                    <div key={recipe.idMeal} className="card">
-                        <Link to={`/${email}/recipe/${recipe.idMeal}`} style={{ textDecoration: 'none' }}>
-                            <img src={recipe.strMealThumb} alt="meal" />
-                            <div className="info">
-                                <h2>{recipe.strMeal}</h2>
-                                <p>{recipe.strArea} food</p>
-                            </div>
-                        </Link>
-                        <button className="dugme" onClick={() => removeFromFavorites(recipe.idMeal)}>Remove from Favorites</button>
-                    </div>
-                ))}
-            </div>
-        </div>
-    );
-};
-
-export default Omiljeni;*/
-// Import the specific functions you need from the SDKs you need
 import { collection, doc, getDoc, setDoc } from 'firebase/firestore';
 import { db } from '../firebase-config';
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-
 import NavbarUser from '../../components/UserComponents/NavbarUser';
 import '../../stilovi/omiljeni.css';
 
 const Omiljeni = () => {
-    const [favoriteRecipes, setFavoriteRecipes] = useState([]);
-    const { email } = useParams();
-    const favoritesRef = collection(db, 'favorites');
-    const userRef = doc(favoritesRef, email);
+    const [favoriteRecipes, setFavoriteRecipes] = useState([]); // State za omiljene recepte
+    const { email } = useParams(); // Dobijanje email parametra iz URL-a
+    const favoritesRef = collection(db, 'favorites'); // Referenca na kolekciju omiljenih recepata
+    const userRef = doc(favoritesRef, email); // Referenca na dokument korisnika
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const docSnap = await getDoc(userRef);
+                const docSnap = await getDoc(userRef); // Dohvatanje dokumenta iz Firestore baze
                 if (docSnap.exists()) {
-                    setFavoriteRecipes(docSnap.data().recipes || []);
+                    setFavoriteRecipes(docSnap.data().recipes || []); // Postavljanje omiljenih recepata iz dokumenta
                 } else {
                     console.log('No such document!');
                 }
@@ -78,8 +30,8 @@ const Omiljeni = () => {
 
     const removeFromFavorites = async (idMeal) => {
         try {
-            await setDoc(userRef, { recipes: favoriteRecipes.filter(recipe => recipe.idMeal !== idMeal) });
-            setFavoriteRecipes(prevFavorites => prevFavorites.filter(recipe => recipe.idMeal !== idMeal));
+            await setDoc(userRef, { recipes: favoriteRecipes.filter(recipe => recipe.idMeal !== idMeal) }); // Uklanjanje recepta iz omiljenih recepata u Firestore bazi
+            setFavoriteRecipes(prevFavorites => prevFavorites.filter(recipe => recipe.idMeal !== idMeal)); // Ažuriranje stanja omiljenih recepata
         } catch (error) {
             console.error("Error removing favorite recipe", error);
         }
@@ -87,19 +39,19 @@ const Omiljeni = () => {
 
     return (
         <div>
-            <NavbarUser/>
+            <NavbarUser/> 
             <h1>Omiljeni recepti</h1>
             <div className="recipe-grid">
                 {favoriteRecipes.map((recipe) => (
                     <div key={recipe.idMeal} className="card">
-                        <Link to={`/${email}/recipe/${recipe.idMeal}`} style={{ textDecoration: 'none' }}>
-                            <img src={recipe.strMealThumb} alt="meal" />
+                        <Link to={`/${email}/recipe/${recipe.idMeal}`} style={{ textDecoration: 'none' }}> {/* Link ka detaljima recepta */}
+                            <img src={recipe.strMealThumb} alt="meal" /> 
                             <div className="info">
-                                <h2>{recipe.strMeal}</h2>
-                                <p>{recipe.strArea} food</p>
+                                <h2>{recipe.strMeal}</h2> 
+                                <p>{recipe.strArea} food</p> 
                             </div>
                         </Link>
-                        <button className="dugme" onClick={() => removeFromFavorites(recipe.idMeal)}>Remove from Favorites</button>
+                        <button className="dugme" onClick={() => removeFromFavorites(recipe.idMeal)}>Ukloni</button> {/* Dugme za uklanjanje recepta iz omiljenih */}
                     </div>
                 ))}
             </div>

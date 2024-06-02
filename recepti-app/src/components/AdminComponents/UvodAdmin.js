@@ -2,6 +2,7 @@ import React from "react";
 import UvodSlika from "../UvodSlika.js";
 
 export default function Uvod() {
+    // niz slika koje se koriste na početnoj stranici
     const images = [
         "/img/Burger.jpg",
         "/img/lunch.jpg",
@@ -26,6 +27,7 @@ export default function Uvod() {
                 
             </div>
             <div className="col slike">
+                {/*mapiranje slika za ispis*/}
                 {images.map((src, index) => (
                     <UvodSlika key={index} imgSrc={src} pt={"85%"} />
                 ))}

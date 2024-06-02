@@ -1,11 +1,11 @@
 import React from 'react';
 import '../../stilovi/Onama.css'; 
-import Navbar from '../../components/Navbar';
+import NavbarUser from '../../components/UserComponents/NavbarUser';
 
 
-export default function Onama() {
+export default function OnamaUser() {
     return (
-        <><Navbar/>
+        <><NavbarUser/>
         <div className="about-us-wrapper">
             <div className="about-us-container">
                 <div className="image-container">

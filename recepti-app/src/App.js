@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -31,20 +31,22 @@ function App() {
         <Routes>
           
           <Route path="/" element={<Pocetna />}/>
-          <Route path="/admin/" element={<PocetnaAdmin />}/>
-          <Route path="/:email/" element={<PocetnaUser />}/>
-          <Route path="/admin/korisnici" element={<Admin />}/>
           <Route path="/recepti" element={<Recepti />}/>
-          <Route path="/:email/recepti" element={<ReceptiUser />}/>
           <Route path="/prijava" element={<Prijava />}/>
           <Route path="/login" element={<Login />}/>
           <Route path="/about" element={<Onama />}/>
-          <Route path="/:email/about" element={<OnamaUser />}/>
           <Route exact path="/undefined/recipe/:id" element={<Recept/>}/>
-          <Route exact path="/:email/recipe/:id" element={<ReceptUser/>}/>
           <Route path="/kontakt" element = {<ContactUs/>}/>
+
+          <Route path="/admin" element={<AdminPage />} /> 
+          <Route path="/admin/" element={<PocetnaAdmin />}/>
+          <Route path="/admin/korisnici" element={<Admin />}/> 
+
+          <Route exact path="/:email/recipe/:id" element={<ReceptUser/>}/>
+          <Route path="/:email/about" element={<OnamaUser />}/>
+          <Route path="/:email/recepti" element={<ReceptiUser />}/>
+          <Route path="/:email/" element={<PocetnaUser />}/>
           <Route path="/:email/kontakt" element = {<ContactUsUser/>}/>
-          <Route path="/admin" element={<AdminPage />} />  
           <Route path="/:email" element={<UserPage />} /> 
           <Route path="/:email/omiljeno" element={<Omiljeni />}/>
 
